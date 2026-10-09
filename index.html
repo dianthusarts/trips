@@ -3,29 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japan Trip Guide — Aug 31, 2026</title>
+<title>Panama &amp; Costa Rica Trip Guide — Feb 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1a1814;
-    --paper: #f7f4ef;
-    --warm-mid: #e8e2d9;
-    --muted: #8a8070;
-    --red: #c0392b;
-    --gold: #b8860b;
-    --teal: #2e6b5e;
-    --indigo: #3d4a7a;
-    --coral: #c85a35;
+    --ink: #13231f;
+    --paper: #f6f3ec;
+    --warm-mid: #e4ded2;
+    --muted: #7a7466;
+    --accent: #d2603a;
+    --teal: #1f6b62;
+    --gold: #b7862b;
     --phase-foundation: #3d4a7a;
-    --phase-places: #2e6b5e;
-    --phase-culture: #b8860b;
-    --phase-hiroshima: #c85a35;
-    --phase-wrap: #6b5e4a;
+    --phase-costa: #2e7d5b;
+    --phase-panama: #b7862b;
+    --phase-canal: #1f5f8b;
+    --phase-carib: #c0533a;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
   body {
     background: var(--paper);
     color: var(--ink);
@@ -34,102 +30,39 @@
     line-height: 1.7;
     font-size: 16px;
   }
+  a { color: var(--teal); }
 
-  /* ITINERARY MAP & CITY VIDEOS */
-  .itinerary-map {
-    width: 100%;
-    max-width: 820px;
-    border-radius: 8px;
-    border: 1px solid var(--warm-mid);
-    display: block;
-    margin: 0 auto 2.5rem;
-  }
-  .map-caption {
-    text-align: center;
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: -1.8rem;
-    margin-bottom: 2rem;
-    font-style: italic;
-  }
-  .city-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.25rem;
-  }
-  .city-card {
-    background: white;
-    border: 1px solid var(--warm-mid);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .city-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 14px 10px;
-    border-bottom: 1px solid var(--warm-mid);
-  }
-  .city-num {
-    width: 26px; height: 26px;
-    border-radius: 50%;
-    background: var(--indigo);
-    color: white;
-    font-size: 12px;
-    font-weight: 500;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .city-name { font-size: 14px; font-weight: 500; line-height: 1.2; }
-  .city-days { font-size: 11px; color: var(--muted); }
-  .city-video {
-    display: block;
-    padding: 10px 14px 12px;
-    font-size: 12px;
-    color: var(--indigo);
-    text-decoration: none;
-    line-height: 1.4;
-  }
-  .city-video::before {
-    content: "▶ ";
-    font-size: 10px;
-    opacity: 0.7;
-  }
-  .city-video:hover { color: var(--red); }
-  .city-video-note {
-    font-size: 11px;
-    color: var(--muted);
-    padding: 0 14px 10px;
-    line-height: 1.4;
-  }
-
-
+  /* NAV */
+  nav {
     position: sticky; top: 0; z-index: 100;
     background: var(--ink);
-    display: flex; align-items: center; gap: 0;
+    display: flex; align-items: center;
     padding: 0 2rem;
-    border-bottom: 2px solid var(--red);
+    border-bottom: 2px solid var(--accent);
+    overflow-x: auto;
   }
   nav .logo {
-    font-family: 'Noto Serif JP', serif;
+    font-family: 'Fraunces', serif;
     color: var(--paper);
     font-size: 15px;
     padding: 14px 0;
     margin-right: auto;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    padding-right: 1rem;
   }
   nav a {
-    color: #aaa;
+    color: #a9b3ae;
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 18px 14px;
+    padding: 18px 12px;
     transition: color 0.2s;
     white-space: nowrap;
   }
   nav a:hover { color: var(--paper); }
-  nav a.active { color: var(--red); }
+  nav a.active { color: var(--accent); }
 
   /* HERO */
   .hero {
@@ -141,259 +74,196 @@
     overflow: hidden;
   }
   .hero::before {
-    content: '日本';
+    content: 'Istmo';
     position: absolute;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 280px;
+    font-family: 'Fraunces', serif;
+    font-size: 240px;
     color: rgba(255,255,255,0.04);
-    top: -40px; right: -20px;
+    top: -30px; right: -20px;
     line-height: 1;
     pointer-events: none;
   }
-  .hero-label {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 1rem;
-  }
-  .hero h1 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-  .hero-sub {
-    color: #aaa;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-  }
+  .hero-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 300; margin-bottom: 1rem; line-height: 1.2; }
+  .hero-sub { color: #a9b3ae; font-size: 14px; letter-spacing: 0.04em; }
   .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 3rem;
-    padding-top: 2rem;
+    display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+    margin-top: 3rem; padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
   .hero-stat { text-align: center; }
-  .hero-stat .val {
-    font-family: 'DM Mono', monospace;
-    font-size: 2rem;
-    color: var(--paper);
-    display: block;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .hero-stat .lbl { font-size: 11px; color: #888; letter-spacing: 0.1em; text-transform: uppercase; }
+  .hero-stat .val { font-family: 'DM Mono', monospace; font-size: 2rem; color: var(--paper); display: block; line-height: 1; margin-bottom: 4px; }
+  .hero-stat .lbl { font-size: 11px; color: #8a948f; letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* MAIN LAYOUT */
   main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 6rem; }
-
-  section { margin-bottom: 5rem; }
+  section { margin-bottom: 5rem; scroll-margin-top: 60px; }
   section > h2 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.6rem;
-    font-weight: 300;
-    margin-bottom: 0.4rem;
-    padding-bottom: 0.8rem;
+    font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 300;
+    margin-bottom: 0.4rem; padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--warm-mid);
   }
-  section > .section-sub {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 2rem;
+  section > .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 2rem; }
+
+  /* LOGISTICS */
+  .logi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .logi {
+    background: white; border: 1px solid var(--warm-mid); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 14px 16px; font-size: 14px; line-height: 1.5;
   }
+  .logi strong { font-weight: 500; display: block; margin-bottom: 4px; }
+  .logi .when { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); display: block; margin-bottom: 6px; }
 
   /* STUDY GUIDE */
-  .week-block { margin-bottom: 1rem; border: 1px solid var(--warm-mid); border-radius: 6px; overflow: hidden; }
+  .progress-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
+  .progress-bar { flex: 1; height: 6px; background: var(--warm-mid); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--teal); width: 0; transition: width 0.3s; }
+  .progress-text { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .reset-btn { background: none; border: none; color: var(--muted); font-size: 11px; text-decoration: underline; cursor: pointer; font-family: inherit; }
 
-  .week-header {
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1.5rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .lesson { margin-bottom: 0.75rem; border: 1px solid var(--warm-mid); border-radius: 6px; overflow: hidden; background: white; }
+  .lesson.done { background: #f1f5f2; }
+  .lesson-header {
     display: flex; align-items: center; gap: 12px;
-    padding: 14px 18px;
-    cursor: pointer;
-    background: white;
-    transition: background 0.15s;
-    user-select: none;
+    padding: 14px 18px; cursor: pointer; user-select: none;
   }
-  .week-header:hover { background: var(--paper); }
-
-  .phase-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  .week-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); min-width: 24px; }
-  .week-title-text { font-size: 15px; font-weight: 400; flex: 1; }
-  .week-dates-text { font-size: 12px; color: var(--muted); }
-  .phase-tag {
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 3px;
-    color: white;
-    white-space: nowrap;
+  .lesson-header:hover { background: var(--paper); }
+  .done-box {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 1.5px solid var(--muted); background: white;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; cursor: pointer; font-size: 12px; color: white;
+    transition: background 0.15s, border-color 0.15s;
   }
-  .chevron-icon { color: var(--muted); font-size: 12px; transition: transform 0.2s; }
-  .week-header.open .chevron-icon { transform: rotate(180deg); }
-
-  .week-body { display: none; border-top: 1px solid var(--warm-mid); }
-  .week-body.vis { display: block; }
-
-  .session {
-    display: flex; gap: 16px;
-    padding: 16px 18px;
-    border-bottom: 1px solid var(--warm-mid);
-  }
-  .session:last-child { border-bottom: none; }
-  .sess-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); min-width: 22px; padding-top: 2px; }
-  .sess-body { flex: 1; }
-  .sess-title { font-size: 14px; font-weight: 400; margin-bottom: 4px; }
-  .sess-desc { font-size: 13px; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
-  .resource { display: flex; align-items: flex-start; gap: 8px; margin-top: 6px; }
-  .rtype {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 3px 7px;
-    border-radius: 3px;
-    white-space: nowrap;
-    margin-top: 1px;
-  }
-  .rtype.read { background: #e8f0fb; color: #1a3a6e; }
-  .rtype.watch { background: #e6f4ec; color: #1a4a2e; }
-  .rlink { font-size: 13px; color: var(--teal); text-decoration: none; line-height: 1.4; }
+  .lesson.done .done-box { background: var(--teal); border-color: var(--teal); }
+  .lesson-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); min-width: 22px; }
+  .lesson-title { font-size: 15px; font-weight: 400; flex: 1; line-height: 1.35; }
+  .lesson.done .lesson-title { color: var(--muted); }
+  .phase-tag { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; color: white; white-space: nowrap; }
+  .chevron { color: var(--muted); font-size: 12px; transition: transform 0.2s; }
+  .lesson.open .chevron { transform: rotate(180deg); }
+  .lesson-body { display: none; border-top: 1px solid var(--warm-mid); padding: 16px 18px 18px 52px; }
+  .lesson.open .lesson-body { display: block; }
+  .lesson-desc { font-size: 14px; color: var(--muted); margin-bottom: 8px; line-height: 1.55; }
+  .lesson-trip { font-size: 12px; color: var(--teal); margin-bottom: 12px; }
+  .resource { display: flex; align-items: flex-start; gap: 8px; margin-top: 10px; }
+  .rtype { font-size: 10px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px; }
+  .rtype.read { background: #e8eef8; color: #1a3a6e; }
+  .rtype.watch { background: #e3f2e9; color: #1a4a2e; }
+  .rlink { font-size: 14px; color: var(--teal); text-decoration: none; line-height: 1.4; }
   .rlink:hover { text-decoration: underline; }
+  .rmeta { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-left: 4px; }
   .rnote { font-size: 12px; color: var(--muted); margin-top: 2px; font-style: italic; }
 
   /* PACKING */
+  .weather-bar {
+    background: var(--ink); color: var(--paper); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;
+  }
+  .weather-item { text-align: center; }
+  .weather-val { font-family: 'DM Mono', monospace; font-size: 1.5rem; display: block; line-height: 1; margin-bottom: 4px; }
+  .weather-lbl { font-size: 11px; color: #8a948f; text-transform: uppercase; letter-spacing: 0.08em; }
+  .note-box {
+    font-size: 13px; color: var(--muted); background: white;
+    border: 1px solid var(--warm-mid); border-left: 3px solid var(--accent);
+    border-radius: 4px; padding: 10px 14px; margin-bottom: 1.5rem; line-height: 1.55;
+  }
+  .note-box strong { color: var(--ink); font-weight: 500; }
   .packing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-  .pack-card {
-    background: white;
-    border: 1px solid var(--warm-mid);
-    border-radius: 6px;
-    padding: 1.25rem;
-  }
+  .pack-card { background: white; border: 1px solid var(--warm-mid); border-radius: 6px; padding: 1.25rem; }
   .pack-card h3 {
-    font-size: 13px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--warm-mid);
+    font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400;
+    margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--warm-mid);
   }
-  .pack-item {
-    display: flex; gap: 10px; align-items: flex-start;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
+  .pack-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: 14px; }
   .pack-item:last-child { margin-bottom: 0; }
   .pack-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
   .pack-text { line-height: 1.4; }
   .pack-why { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; font-style: italic; }
-
-  .weather-bar {
-    background: var(--ink);
-    color: var(--paper);
-    border-radius: 6px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1rem;
-  }
-  .weather-item { text-align: center; }
-  .weather-val { font-family: 'DM Mono', monospace; font-size: 1.6rem; display: block; line-height: 1; margin-bottom: 4px; }
-  .weather-lbl { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.08em; }
-  .weather-note {
-    font-size: 13px;
-    color: var(--muted);
-    background: white;
-    border: 1px solid var(--warm-mid);
-    border-left: 3px solid var(--coral);
-    border-radius: 4px;
-    padding: 10px 14px;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-  }
 
   /* PHRASES */
   .phrases-table { width: 100%; border-collapse: collapse; font-size: 14px; }
   .phrases-table thead tr { background: var(--ink); color: var(--paper); }
   .phrases-table th { padding: 10px 14px; text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; }
   .phrases-table td { padding: 10px 14px; border-bottom: 1px solid var(--warm-mid); vertical-align: top; }
-  .phrases-table tr:last-child td { border-bottom: none; }
   .phrases-table tr:nth-child(even) td { background: white; }
-  .jp { font-family: 'Noto Serif JP', serif; font-size: 15px; }
-  .romaji { font-family: 'DM Mono', monospace; color: var(--teal); font-size: 13px; }
+  .es { font-family: 'Fraunces', serif; font-size: 16px; }
+  .say { font-family: 'DM Mono', monospace; color: var(--teal); font-size: 12px; }
   .phrase-note { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 3px; }
-
-  /* STOP PREVIEWS */
-  .stops-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
-  .stop-card {
-    background: white;
-    border: 1px solid var(--warm-mid);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .stop-header {
-    padding: 12px 16px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .stop-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: white;
-    background: var(--ink);
-    width: 24px; height: 24px;
-    border-radius: 50%;
+  .speak-btn {
+    background: none; border: 1px solid var(--warm-mid); border-radius: 50%;
+    width: 30px; height: 30px; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
+    font-size: 14px; padding: 0; transition: background 0.15s, border-color 0.15s;
   }
-  .stop-name { font-size: 15px; font-weight: 400; }
+  .speak-btn:hover { background: var(--warm-mid); border-color: var(--muted); }
+  .speak-btn.speaking { background: #e3f2e9; border-color: var(--teal); }
+
+  /* STOPS */
+  .stops-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
+  .stop-card { background: white; border: 1px solid var(--warm-mid); border-radius: 6px; overflow: hidden; }
+  .stop-header { padding: 12px 16px; display: flex; align-items: center; gap: 10px; }
+  .stop-num {
+    font-family: 'DM Mono', monospace; font-size: 11px; color: white; background: var(--ink);
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .stop-name { font-size: 15px; font-weight: 400; line-height: 1.25; }
   .stop-days { font-size: 11px; color: var(--muted); margin-top: 1px; }
-  .stop-body { padding: 0 16px 14px; border-top: 1px solid var(--warm-mid); margin-top: 0; }
-  .stop-body ul { padding-left: 0; list-style: none; margin-top: 10px; }
+  .stop-body { padding: 0 16px 14px; border-top: 1px solid var(--warm-mid); }
+  .stop-body ul { list-style: none; margin-top: 10px; }
   .stop-body li {
-    font-size: 13px;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--warm-mid);
-    display: flex; align-items: flex-start; gap: 8px;
-    line-height: 1.4;
+    font-size: 13px; padding: 5px 0; border-bottom: 1px solid var(--warm-mid);
+    display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;
   }
   .stop-body li:last-child { border-bottom: none; }
-  .stop-body li::before { content: '→'; color: var(--red); flex-shrink: 0; margin-top: 1px; }
+  .stop-body li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
   .stop-context { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--warm-mid); }
 
-  /* PHASE LEGEND */
-  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1.5rem; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
-  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
-
-  /* FOOTER */
-  footer {
-    background: var(--ink);
-    color: #666;
-    text-align: center;
-    padding: 2rem;
-    font-size: 12px;
-    letter-spacing: 0.05em;
+  /* ITINERARY */
+  .itinerary-map { width: 100%; max-width: 820px; border-radius: 8px; border: 1px solid var(--warm-mid); display: block; margin: 0 auto 0.75rem; background: white; }
+  .map-caption { text-align: center; font-size: 12px; color: var(--muted); margin-bottom: 2rem; font-style: italic; }
+  .day-list { border-left: 2px solid var(--warm-mid); margin-left: 12px; }
+  .day {
+    position: relative; padding: 0 0 1.4rem 1.5rem;
   }
-  footer span { color: var(--red); }
+  .day::before {
+    content: ''; position: absolute; left: -7px; top: 6px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--paper); border: 2px solid var(--teal);
+  }
+  .day.ext::before { border-color: var(--accent); }
+  .day.travel::before { border-color: var(--muted); }
+  .day-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.04em; }
+  .day-title { font-size: 15px; font-weight: 500; line-height: 1.35; margin: 2px 0 4px; }
+  .day-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .day-video { display: inline-block; margin-top: 6px; font-size: 13px; color: var(--teal); text-decoration: none; }
+  .day-video::before { content: "▶ "; font-size: 10px; opacity: 0.7; }
+  .day-video:hover { text-decoration: underline; }
 
-  @media (max-width: 600px) {
-    nav a { display: none; }
-    nav a:last-child { display: block; }
-    .hero::before { font-size: 160px; }
+  footer { background: var(--ink); color: #6f7a75; text-align: center; padding: 2rem; font-size: 12px; letter-spacing: 0.05em; }
+  footer span { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    nav .logo { display: none; }
+    main { padding: 2rem 1rem 4rem; }
+    .hero::before { font-size: 140px; }
     .hero-stats { gap: 1.5rem; }
-    .week-dates-text { display: none; }
+    .phase-tag { display: none; }
+    .lesson-body { padding-left: 18px; }
+    .phrases-table th:nth-child(3), .phrases-table td:nth-child(3) { display: none; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">日本 — Japan 2026</div>
+  <div class="logo">Panama &amp; Costa Rica 2027</div>
+  <a href="#logistics">Logistics</a>
   <a href="#study">Study Guide</a>
   <a href="#packing">Packing</a>
   <a href="#phrases">Phrases</a>
@@ -402,623 +272,538 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-label">Smithsonian Journeys · Eternal Japan</div>
-  <h1>Your Japan<br>Preparation Guide</h1>
-  <div class="hero-sub">Departing August 31, 2026 · Tokyo → Kanazawa → Kyoto → Hiroshima</div>
+  <div class="hero-label">Smithsonian Journeys · PONANT · Le Lapérouse</div>
+  <h1>Panama &amp; Costa Rica<br>by Sea</h1>
+  <div class="hero-sub">Feb 18 – 28, 2027 · San José → Quepos → Darién → Panama City → Panama Canal → San Blas → Colón → Gamboa</div>
   <div class="hero-stats">
     <div class="hero-stat"><span class="val" id="days-left">—</span><span class="lbl">Days to go</span></div>
-    <div class="hero-stat"><span class="val">42</span><span class="lbl">Study sessions</span></div>
-    <div class="hero-stat"><span class="val">6</span><span class="lbl">Cities</span></div>
-    <div class="hero-stat"><span class="val">~18</span><span class="lbl">Min per session</span></div>
+    <div class="hero-stat"><span class="val" id="done-count">0/15</span><span class="lbl">Lessons done</span></div>
+    <div class="hero-stat"><span class="val">2</span><span class="lbl">Countries</span></div>
+    <div class="hero-stat"><span class="val">&lt;5</span><span class="lbl">Min per video</span></div>
   </div>
 </div>
 
 <main>
 
+  <!-- LOGISTICS -->
+  <section id="logistics">
+    <h2>Logistics at a Glance</h2>
+    <p class="section-sub">From the PONANT flight email and your United itinerary</p>
+    <div class="logi-grid">
+      <div class="logi"><span class="when">By Dec 21, 2026</span><strong>Send flights to PONANT</strong>Email your full flight itinerary to Lindsay Miller (lmiller@ponant.com, 833-889-0800) so transfers can be arranged.</div>
+      <div class="logi"><span class="when">Before you go</span><strong>Sign up for the hospitality suite</strong>Required. Email lmiller@ponant.com with your first and last name and number of guests.</div>
+      <div class="logi"><span class="when">Thu, Feb 18</span><strong>United EWR 3:32 PM → SJO 7:53 PM</strong>The hospitality suite is daytime only, so you need your own room at the DoubleTree Cariari for the night of the 18th.</div>
+      <div class="logi"><span class="when">Fri, Feb 19 · by 12:30 PM</span><strong>Hospitality suite → group coach</strong>DoubleTree Cariari suite open 9:00–3:00. Arrive by 12:30 so luggage can be tagged. Embarkation 4:00–5:00 PM.</div>
+      <div class="logi"><span class="when">Fri, Feb 26</span><strong>Disembark in Colón · Post-cruise extension</strong>Two nights at Gamboa Rainforest Reserve. Transfer to Tocumen (PTY) on Feb 28 is included.</div>
+      <div class="logi"><span class="when">Sun, Feb 28</span><strong>United PTY 10:00 AM → EWR 3:16 PM</strong>An early departure: confirm your airport transfer time with PONANT when you send your flights.</div>
+    </div>
+  </section>
+
   <!-- STUDY GUIDE -->
   <section id="study">
-    <h2>14-Week Study Guide</h2>
-    <p class="section-sub">3 sessions per week · 15–20 min each · Organized by the places you'll actually visit</p>
+    <h2>15-Lesson Study Guide</h2>
+    <p class="section-sub">Each lesson pairs one short article (10 minutes or less) with a video under 5 minutes. Tap the circle to mark a lesson done — your progress is saved in this browser.</p>
 
-    <div class="legend">
-      <div class="legend-item"><div class="legend-dot" style="background:#3d4a7a"></div>Foundation</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#2e6b5e"></div>Places &amp; landscapes</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#b8860b"></div>Culture &amp; religion</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#c85a35"></div>Hiroshima &amp; WWII</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#6b5e4a"></div>Final prep</div>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <span class="progress-text" id="progress-text">0 of 15 done</span>
+      <button class="reset-btn" id="reset-btn" type="button">reset</button>
     </div>
 
-    <div id="weeks-container"></div>
+    <div class="legend" id="legend"></div>
+    <div id="lessons"></div>
   </section>
 
   <!-- PACKING -->
   <section id="packing">
     <h2>Packing Context Sheet</h2>
-    <p class="section-sub">The cultural and practical "why" behind what to bring — specific to Japan in early September</p>
+    <p class="section-sub">The practical "why" behind what to bring for an expedition cruise in the tropics in late February</p>
 
     <div class="weather-bar">
-      <div class="weather-item"><span class="weather-val">82°F</span><span class="weather-lbl">Avg high Tokyo</span></div>
-      <div class="weather-item"><span class="weather-val">70°F</span><span class="weather-lbl">Avg low (night)</span></div>
-      <div class="weather-item"><span class="weather-val">75%+</span><span class="weather-lbl">Humidity</span></div>
-      <div class="weather-item"><span class="weather-val">1–2</span><span class="weather-lbl">Typhoons avg</span></div>
+      <div class="weather-item"><span class="weather-val">80°F+</span><span class="weather-lbl">Daytime temps</span></div>
+      <div class="weather-item"><span class="weather-val">High</span><span class="weather-lbl">Humidity</span></div>
+      <div class="weather-item"><span class="weather-val">Dry</span><span class="weather-lbl">Season (Pacific side)</span></div>
+      <div class="weather-item"><span class="weather-val">~9°N</span><span class="weather-lbl">Near the equator</span></div>
     </div>
 
-    <div class="weather-note">
-      <strong>September reality check:</strong> Early September still feels like peak summer — hot, sticky, and occasionally very rainy. By the time you reach Kyoto in the second week, it cools slightly. Bring a compact umbrella always; Japan also sells excellent cheap ones at every convenience store. Typhoons are possible but typically pass in 1–2 days.
+    <div class="note-box">
+      <strong>What the tour expects:</strong> Smithsonian says to expect temperatures over 80°F, high humidity and strong sun, with time on small open boats that give no shade. Landings are "wet" — you step from the Zodiac into ankle-deep water — and rainforest trails can be uneven and slippery, with walks of two to three miles.
     </div>
 
     <div class="packing-grid">
-
       <div class="pack-card">
-        <h3>Temples &amp; shrines</h3>
-        <div class="pack-item"><span class="pack-icon">👟</span><div class="pack-text">Slip-on shoes<span class="pack-why">You'll remove shoes dozens of times — at ryokans, some temples, traditional restaurants. Laces are a burden.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🧦</span><div class="pack-text">Good socks, no holes<span class="pack-why">You will be sockless in public repeatedly. Japan notices.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🧣</span><div class="pack-text">Light scarf or shawl<span class="pack-why">Some temples ask shoulders to be covered. Works as sun protection too.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🎒</span><div class="pack-text">Small daypack<span class="pack-why">Lockers at shrines and gardens are common; you'll store your main bag often.</span></div></div>
+        <h3>Zodiacs &amp; wet landings</h3>
+        <div class="pack-item"><span class="pack-icon">👡</span><div class="pack-text">Water shoes or strapped sport sandals<span class="pack-why">You'll step into the surf at Playa Muerto and San Blas. Flip-flops slip off; closed-toe water shoes protect against coral and rocks.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🎒</span><div class="pack-text">Small dry bag<span class="pack-why">Keeps your phone, camera and passport copy dry on Zodiac rides and spray.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🩳</span><div class="pack-text">Quick-dry shorts or roll-up pants<span class="pack-why">Hems get wet on landings. Synthetics dry in an hour; cotton stays damp all day.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🥾</span><div class="pack-text">Trail shoes with grip<span class="pack-why">For the Manuel Antonio walk, the Darién waterfall hike and Pipeline Road in Gamboa.</span></div></div>
       </div>
 
       <div class="pack-card">
-        <h3>Weather &amp; comfort</h3>
-        <div class="pack-item"><span class="pack-icon">👕</span><div class="pack-text">Lightweight, breathable fabrics<span class="pack-why">Linen and moisture-wicking synthetics only. Cotton holds sweat. You'll walk 5+ miles most days.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">☂️</span><div class="pack-text">Compact folding umbrella<span class="pack-why">Bring one, but if you forget, 7-Eleven sells them for $5. Japan is extremely well-stocked.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🌡️</span><div class="pack-text">Light layer for indoors<span class="pack-why">Japanese air conditioning is aggressive. Restaurants and museums are often very cold.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🕶️</span><div class="pack-text">Sunglasses + SPF 50<span class="pack-why">September sun is intense. Japanese sunscreen brands (Biore, Anessa) are excellent and cheap if you want to buy there.</span></div></div>
+        <h3>Sun, heat &amp; bugs</h3>
+        <div class="pack-item"><span class="pack-icon">👒</span><div class="pack-text">Wide-brim hat with a chin strap<span class="pack-why">Open boats have no shade, and the strap keeps it on at Zodiac speed.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🧴</span><div class="pack-text">Reef-safe sunscreen<span class="pack-why">For snorkeling at Cayos Holandeses on the San Blas reef — mineral (zinc) formulas are kinder to coral.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🦟</span><div class="pack-text">Insect repellent<span class="pack-why">Mangrove estuaries, the Darién forest and Gamboa are prime mosquito territory, especially at dusk.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">👕</span><div class="pack-text">Long-sleeve sun shirt<span class="pack-why">Covers you from sun and bugs at once, and is cooler than it sounds.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🧥</span><div class="pack-text">Light rain shell<span class="pack-why">Rainforests earn their name, even in the dry season. Also handy against strong ship air conditioning.</span></div></div>
       </div>
 
       <div class="pack-card">
-        <h3>Practical Japan-specifics</h3>
-        <div class="pack-item"><span class="pack-icon">💴</span><div class="pack-text">Cash (¥30,000–¥50,000)<span class="pack-why">Japan is still heavily cash-based. Many temples, small restaurants, and rural spots are cash-only. 7-Eleven and Japan Post ATMs accept foreign cards.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">📶</span><div class="pack-text">Pocket wifi or SIM<span class="pack-why">Pre-order a pocket wifi rental or SIM card for delivery to your airport hotel. Google Maps in Japan is essential.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🔌</span><div class="pack-text">Type A plug (no adapter needed)<span class="pack-why">Japan uses the same plugs as the US. Voltage is 100V — check your devices but most modern electronics are fine.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🎒</span><div class="pack-text">Luggage forwarding service<span class="pack-why">Japan's "takuhaibin" will forward your big suitcase between hotels for ~$15. Pack a day bag so you can travel light on train days.</span></div></div>
+        <h3>Wildlife watching</h3>
+        <div class="pack-item"><span class="pack-icon">🔭</span><div class="pack-text">Binoculars<span class="pack-why">Sloths, toucans and monkeys sit high in the canopy. This is the single most useful item for Manuel Antonio, Gatun Lake and Pipeline Road.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">📷</span><div class="pack-text">Camera with zoom, or phone lens clip<span class="pack-why">The Canal transit is a full day of photo moments; wildlife needs reach.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🤿</span><div class="pack-text">Your own snorkel mask (optional)<span class="pack-why">The ship's marina has complimentary snorkel gear, but a mask that fits you is more comfortable.</span></div></div>
       </div>
 
       <div class="pack-card">
-        <h3>Ryokan night (essential)</h3>
-        <div class="pack-item"><span class="pack-icon">🏯</span><div class="pack-text">Yukata is provided<span class="pack-why">The traditional robe is given to you at the inn. Don't pack a bathrobe.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🛁</span><div class="pack-text">Onsen etiquette<span class="pack-why">Shower before entering the communal bath. No swimsuits — baths are used unclothed. Tattoos may be restricted at some onsens.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🧴</span><div class="pack-text">Minimal toiletries<span class="pack-why">Ryokans provide high-quality shampoo, conditioner, face wash. Japanese drugstores (Matsumoto Kiyoshi) sell everything else cheaply.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">📱</span><div class="pack-text">No shoes indoors — ever<span class="pack-why">At your ryokan, never wear shoes past the entryway (genkan). Slippers are provided. Remove slippers before stepping on tatami mats.</span></div></div>
+        <h3>Money &amp; practical</h3>
+        <div class="pack-item"><span class="pack-icon">💵</span><div class="pack-text">Small US bills<span class="pack-why">Panama uses the US dollar. Emberá and Guna artisans sell baskets, carvings and molas for cash, and change is scarce in villages.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🔌</span><div class="pack-text">No adapter needed<span class="pack-why">Both countries use the same plug shape as the US.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🛂</span><div class="pack-text">Passport valid 6+ months<span class="pack-why">PONANT recommends six months beyond the end of the cruise, with blank pages for stamps.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">💉</span><div class="pack-text">Ask your doctor about yellow fever<span class="pack-why">PONANT notes the vaccine is recommended for Panama east of the Canal Zone — which includes Darién. Check CDC guidance well ahead.</span></div></div>
       </div>
 
       <div class="pack-card">
-        <h3>Leave this at home</h3>
-        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Heavy guidebooks<span class="pack-why">Japan Guide (japan-guide.com) on your phone is better than any paper guide.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Large bottles of toiletries<span class="pack-why">Buy in Japan — cheaper, better quality, and fun to shop for.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Revealing clothing<span class="pack-why">Shorts are fine for sightseeing, but very short skirts or low-cut tops are culturally out of place at temples.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Perfume or strong scents<span class="pack-why">Strong fragrances are unusual in Japan and inappropriate in confined spaces like trains.</span></div></div>
+        <h3>Village visits</h3>
+        <div class="pack-item"><span class="pack-icon">📸</span><div class="pack-text">Ask before photographing people<span class="pack-why">"¿Puedo tomar una foto?" Some Guna communities ask for a small fee per photo.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🧺</span><div class="pack-text">Room in your bag for crafts<span class="pack-why">Emberá woven baskets and Guna molas are flat or light, but bring a spare tote.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">👗</span><div class="pack-text">Modest, easy layers<span class="pack-why">Shorts are fine; a light cover-up is respectful when you're a guest in someone's village.</span></div></div>
       </div>
 
       <div class="pack-card">
-        <h3>Small things that matter</h3>
-        <div class="pack-item"><span class="pack-icon">📇</span><div class="pack-text">Business cards (meishi)<span class="pack-why">If you have them, bring them. Exchanging cards is still a ritual in Japan. Receive cards with two hands, read them before putting away.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">🎁</span><div class="pack-text">Small gifts from home<span class="pack-why">A local food item (maple candy, etc.) as a gift is deeply appreciated. Wrap it nicely — presentation is everything in Japan.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">📓</span><div class="pack-text">Small notebook<span class="pack-why">Japanese stationery is extraordinary. Buy one there — but bring a pen. Taking notes shows respect to guides.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">😷</span><div class="pack-text">Face masks<span class="pack-why">Still very common in Japan. Having a few is polite for crowded trains or if you feel unwell.</span></div></div>
+        <h3>Leave at home</h3>
+        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Heavy jeans and cotton<span class="pack-why">Too hot and won't dry in the humidity.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Wheeled bag for village days<span class="pack-why">Bring a soft daypack; you'll be climbing in and out of Zodiacs.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Lots of formal wear<span class="pack-why">Expedition cruises are relaxed; a smart-casual outfit or two covers dinners.</span></div></div>
       </div>
-
     </div>
   </section>
 
   <!-- PHRASES -->
   <section id="phrases">
-    <h2>Essential Japanese Phrases</h2>
-    <p class="section-sub">Tap the speaker button to hear each phrase spoken by a female Japanese voice. Works in Chrome, Safari, Edge, and Firefox.</p>
-
-    <div id="tts-status" style="display:none; font-size:13px; color:var(--coral); background:white; border:1px solid var(--warm-mid); border-left:3px solid var(--coral); border-radius:4px; padding:10px 14px; margin-bottom:1rem; line-height:1.5;">
-      Your browser doesn't support speech synthesis, or no Japanese voice is installed. On desktop, try Chrome or Edge. On iPhone/iPad, this works natively in Safari.
-    </div>
+    <h2>Essential Spanish Phrases</h2>
+    <p class="section-sub">Tap the speaker to hear each phrase in a Latin American Spanish voice. Works in Chrome, Safari, Edge and Firefox.</p>
+    <div class="note-box" id="tts-status" style="display:none;">Your browser doesn't support speech, or no Spanish voice is installed. On iPhone and iPad this works in Safari; on desktop, try Chrome or Edge.</div>
     <div id="voice-info" style="display:none; font-size:12px; color:var(--muted); font-style:italic; margin-bottom:1rem;"></div>
-
     <table class="phrases-table">
-      <thead>
-        <tr>
-          <th style="width:36px;"></th>
-          <th>Japanese</th>
-          <th>Pronunciation</th>
-          <th>Meaning &amp; when to use</th>
-        </tr>
-      </thead>
+      <thead><tr><th style="width:44px;"></th><th>Spanish</th><th>Say it</th><th>Meaning &amp; when to use</th></tr></thead>
       <tbody id="phrases-tbody"></tbody>
     </table>
   </section>
 
-  <!-- STOP PREVIEWS -->
+  <!-- STOPS -->
   <section id="stops">
     <h2>What You'll See at Each Stop</h2>
-    <p class="section-sub">A quick preview of every destination on your itinerary — so nothing comes as a surprise</p>
+    <p class="section-sub">A quick preview of every destination, so nothing comes as a surprise</p>
 
     <div class="stops-grid">
-
       <div class="stop-card">
-        <div class="stop-header">
-          <div class="stop-num">1</div>
-          <div><div class="stop-name">Tokyo</div><div class="stop-days">Days 2–4</div></div>
-        </div>
-        <div class="stop-body">
-          <ul>
-            <li>Senso-ji Temple — Tokyo's oldest, in the ancient Asakusa district</li>
-            <li>Edo-Tokyo Museum — traces the city from shogunal capital to megacity</li>
-            <li>Imperial Palace East Gardens — the former innermost part of Edo Castle</li>
-            <li>Calligrapher's gallery visit (Koshun Masunaga)</li>
-          </ul>
-          <div class="stop-context">Tokyo was called Edo until 1868. The tour is designed to show you both the ancient city and the modern one layered on top of it.</div>
-        </div>
+        <div class="stop-header"><div class="stop-num">1</div><div><div class="stop-name">San José → Puerto Caldera</div><div class="stop-days">Feb 18–19 · Arrival &amp; embarkation</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Night at the DoubleTree Cariari, near SJO airport</li>
+          <li>Hospitality suite and group coach to the port</li>
+          <li>Board Le Lapérouse at the mouth of the Gulf of Nicoya</li>
+        </ul><div class="stop-context">The drive crosses Costa Rica's Central Valley down to the Pacific. The ship has an underwater lounge, the Blue Eye, with windows below the waterline.</div></div>
       </div>
 
       <div class="stop-card">
-        <div class="stop-header">
-          <div class="stop-num">2</div>
-          <div><div class="stop-name">Mt. Fuji / Lake Suwa</div><div class="stop-days">Day 5</div></div>
-        </div>
-        <div class="stop-body">
-          <ul>
-            <li>Mt. Fuji-Hakone-Izu National Park — the iconic volcano</li>
-            <li>Lake Ashi — views of Fuji across the water</li>
-            <li>Overnight in a ryokan (traditional inn)</li>
-            <li>Onsen (hot spring bath) experience</li>
-          </ul>
-          <div class="stop-context">Fuji is a dormant volcano last active in 1707. It's been a spiritual site and artistic obsession for centuries — you'll recognize it from Hokusai's prints.</div>
-        </div>
+        <div class="stop-header"><div class="stop-num">2</div><div><div class="stop-name">Quepos &amp; Manuel Antonio</div><div class="stop-days">Feb 20 · Costa Rica</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Naturalist walk in Manuel Antonio National Park</li>
+          <li>Or a riverboat through the Damas Island mangroves</li>
+          <li>Or rafting on the Savegre River</li>
+        </ul><div class="stop-context">One of Costa Rica's smallest national parks, where rainforest runs straight down to white-sand beaches. Watch for sloths, monkeys, toucans and caimans.</div></div>
       </div>
 
       <div class="stop-card">
-        <div class="stop-header">
-          <div class="stop-num">3</div>
-          <div><div class="stop-name">Takayama</div><div class="stop-days">Day 6</div></div>
-        </div>
-        <div class="stop-body">
-          <ul>
-            <li>Old town Sanmachi Suji — preserved Edo-period merchant streets</li>
-            <li>Hida Folk Village — open-air museum of traditional farmhouses</li>
-            <li>Morning markets (if timing allows)</li>
-          </ul>
-          <div class="stop-context">A mountain town that was a center of carpentry and craftsmen during the Edo period. Often called "Little Kyoto" — quieter and more rural than the famous cities.</div>
-        </div>
+        <div class="stop-header"><div class="stop-num">3</div><div><div class="stop-name">Playa Muerto · Darién</div><div class="stop-days">Feb 22 · After a day at sea</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Zodiac landing at an Emberá village</li>
+          <li>Welcome by the chief, traditional dances</li>
+          <li>Optional short hike to a waterfall</li>
+        </ul><div class="stop-context">Darién is Panama's most remote province and a UNESCO World Heritage site since the 1980s. About 30,000 Indigenous people live here, mostly Emberá.</div></div>
       </div>
 
       <div class="stop-card">
-        <div class="stop-header">
-          <div class="stop-num">4</div>
-          <div><div class="stop-name">Kanazawa</div><div class="stop-days">Days 7–8</div></div>
-        </div>
-        <div class="stop-body">
-          <ul>
-            <li>Kenrokuen Garden — one of Japan's top 3 gardens (stroll garden, 11 hectares)</li>
-            <li>Higashi Chaya — historic geisha district, still active</li>
-            <li>Gold leaf craft gallery — 99% of Japan's gold leaf made here</li>
-            <li>Kanazawa Castle Park</li>
-          </ul>
-          <div class="stop-context">Kanazawa survived WWII bombing because it had no military industry. Result: the most intact pre-modern city in Japan outside Kyoto.</div>
-        </div>
+        <div class="stop-header"><div class="stop-num">4</div><div><div class="stop-name">Panama City</div><div class="stop-days">Feb 23 · From Fuerte Amador</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Biomuseo, designed by Frank Gehry</li>
+          <li>STRI's Punta Culebra Nature Center with Smithsonian staff</li>
+          <li>Choice: Casco Antiguo walk and lunch, or Panamá Viejo ruins</li>
+        </ul><div class="stop-context">Founded in 1519, burned in 1671, rebuilt on a new site. Both old cities are a joint UNESCO World Heritage site.</div></div>
       </div>
 
       <div class="stop-card">
-        <div class="stop-header">
-          <div class="stop-num">5</div>
-          <div><div class="stop-name">Kyoto</div><div class="stop-days">Days 9–12</div></div>
-        </div>
-        <div class="stop-body">
-          <ul>
-            <li>Nijo Castle — shogun's Kyoto residence; where the shogunate ended in 1867</li>
-            <li>Kinkaku-ji — the famous Golden Pavilion</li>
-            <li>Fushimi Inari Taisha — thousands of torii gates on a forested hill</li>
-            <li>Tea ceremony participation</li>
-            <li>Full day in Nara — giant Buddha, sacred deer, ancient capital</li>
-            <li>Arashiyama bamboo grove</li>
-          </ul>
-          <div class="stop-context">Imperial capital for over 1,000 years. Deliberately spared from WWII bombing — which is why so much is intact. Four full days here is not enough.</div>
-        </div>
+        <div class="stop-header"><div class="stop-num">5</div><div><div class="stop-name">Panama Canal transit</div><div class="stop-days">Feb 24 · Full daylight crossing</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Three levels of locks, Pacific to Caribbean</li>
+          <li>Gatun Lake, once a jungle valley</li>
+          <li>Expert lectures on the canal's history</li>
+        </ul><div class="stop-context">The French began in 1881 and failed; the United States finished it between 1904 and 1914. Panama has run it since 1999.</div></div>
       </div>
 
       <div class="stop-card">
-        <div class="stop-header">
-          <div class="stop-num" style="background:#c85a35">H</div>
-          <div><div class="stop-name">Hiroshima + Miyajima</div><div class="stop-days">Extension</div></div>
-        </div>
-        <div class="stop-body">
-          <ul>
-            <li>Peace Memorial Museum — the most important museum you'll ever visit</li>
-            <li>Atomic Bomb Dome — the only structure left standing near the epicenter</li>
-            <li>Peace Memorial Park and cenotaph</li>
-            <li>Miyajima Island — the "floating" torii gate of Itsukushima Shrine</li>
-            <li>Bullet train Kyoto → Hiroshima → Osaka</li>
-          </ul>
+        <div class="stop-header"><div class="stop-num">6</div><div><div class="stop-name">San Blas Islands</div><div class="stop-days">Feb 25 · Cayos Holandeses</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Swimming and snorkeling behind a coral reef</li>
+          <li>Meeting the Guna people</li>
+          <li>Molas — layered, hand-sewn textile panels</li>
+        </ul><div class="stop-context">More than 300 islands governed by the Guna as an autonomous territory, Guna Yala.</div></div>
+      </div>
+
+      <div class="stop-card">
+        <div class="stop-header"><div class="stop-num" style="background:var(--accent)">E</div><div><div class="stop-name">Colón · Agua Clara · San Lorenzo</div><div class="stop-days">Feb 26 · Extension day 1</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Agua Clara Observation Center over the new expanded locks</li>
+          <li>Ruins of Fort San Lorenzo above the Chagres River</li>
+          <li>Transfer to Gamboa Rainforest Reserve</li>
+        </ul><div class="stop-context">San Lorenzo guarded Spain's treasure route across the isthmus; it's part of a UNESCO site with Portobelo.</div></div>
+      </div>
+
+      <div class="stop-card">
+        <div class="stop-header"><div class="stop-num" style="background:var(--accent)">E</div><div><div class="stop-name">Gamboa</div><div class="stop-days">Feb 27 · Extension day 2</div></div></div>
+        <div class="stop-body"><ul>
+          <li>Boat cruise on Gatun Lake among the islands</li>
+          <li>Sloth sanctuary, butterfly garden, orchids, frog pond</li>
+          <li>Choice: Pipeline Road birding or the aerial tram</li>
+        </ul><div class="stop-context">Gamboa sits where the Chagres River meets the canal, inside Soberanía National Park. Barro Colorado Island, STRI's famous research station, is in the same lake.</div></div>
+      </div>
     </div>
   </section>
 
+  <!-- ITINERARY -->
   <section id="itinerary">
-    <h2>Tour Map &amp; City Videos</h2>
-    <p class="section-sub">Your route at a glance — plus a short video for every stop from japan-guide.com</p>
+    <h2>Tour Map &amp; Day-by-Day</h2>
+    <p class="section-sub">Your route at a glance, with a short video for each stop</p>
 
-    <img src="map.png"
-         class="itinerary-map"
-         alt="Smithsonian Eternal Japan 2026 tour route — Tokyo to Hiroshima">
-    <p class="map-caption">Tokyo → Hakone/Mt. Fuji → Takayama → Shirakawa-go → Kanazawa → Kyoto/Nara → Hiroshima &amp; Miyajima (extension) · Upload map.png alongside index.html to display</p>
+    <img src="https://tf-cmsv2-journeys-media.s3.amazonaws.com/journeys/tour/itinerary_file_map/PON-Panama-and-Costa-Rica-by-Sea-2027-v2.jpg"
+         class="itinerary-map" loading="lazy"
+         alt="Smithsonian Journeys route map for Panama and Costa Rica by Sea, 2027">
+    <p class="map-caption">Map: Smithsonian Journeys / PONANT, 2027 route (loaded from the Smithsonian site)</p>
 
-    <div class="city-grid">
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">1</div>
-          <div><div class="city-name">Tokyo</div><div class="city-days">Days 2–4 · Meiji Shrine · Asakusa · Imperial Palace</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=Hr_TbL5ejuQ" target="_blank" rel="noopener">Top 5 Things to Do in Tokyo (japan-guide.com)</a>
-        <div class="city-video-note">japan-guide.com's own channel — reliable, concise, no fluff</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">2</div>
-          <div><div class="city-name">Hakone</div><div class="city-days">Day 5 · Ryokan overnight · Kaiseki · Onsen</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=vIapoWBZAGg" target="_blank" rel="noopener">Top 5 Things to Do in Hakone (japan-guide.com)</a>
-        <div class="city-video-note">Covers the ryokan, open-air museum, and Mt. Fuji views you'll experience on Day 5</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">3</div>
-          <div><div class="city-name">Mt. Fuji Area</div><div class="city-days">Day 5 · Fuji-Hakone-Izu National Park</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=QZQaO3VNL3o" target="_blank" rel="noopener">Top 5 Things to Do Around Mt. Fuji (japan-guide.com)</a>
-        <div class="city-video-note">The mountain you'll see from the park, the museum, and the ryokan window</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">4</div>
-          <div><div class="city-name">Takayama</div><div class="city-days">Days 6–7 · Old Town · Tea ceremony · Sake brewery</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=Avl0V_Ph08U" target="_blank" rel="noopener">Top 5 Things to Do in Takayama (japan-guide.com)</a>
-        <div class="city-video-note">The Sanmachi-suji merchant streets, morning markets, and mountain atmosphere</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">5</div>
-          <div><div class="city-name">Shirakawa-go</div><div class="city-days">Day 8 · UNESCO thatched-roof village</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=iSj822hWNc0" target="_blank" rel="noopener">Shirakawago Travel Guide — Japan's Most Beautiful Village</a>
-        <div class="city-video-note">The gassho-zukuri farmhouses and what makes this UNESCO World Heritage site special</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">6</div>
-          <div><div class="city-name">Kanazawa</div><div class="city-days">Days 8–9 · Kenrokuen · Gold leaf · Geisha district</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=NOfHCBA8Kss" target="_blank" rel="noopener">Top 5 Things to Do in Kanazawa (japan-guide.com)</a>
-        <div class="city-video-note">Kenrokuen, the geisha district, gold leaf gallery, and Omicho Market — all on your Day 9 itinerary</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">7</div>
-          <div><div class="city-name">Kyoto</div><div class="city-days">Days 10–12 · Golden Pavilion · Nijo Castle · Gion farewell dinner</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=2G0Hh8f9Cc8" target="_blank" rel="noopener">Top 5 Things to Do in Kyoto (japan-guide.com)</a>
-        <div class="city-video-note">Japan's cultural capital — you have four days here, the most of anywhere on the tour</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num">8</div>
-          <div><div class="city-name">Nara</div><div class="city-days">Day 11 (day trip) · Great Buddha · Sacred deer · Kasuga Shrine</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=Kbz3E1INyVw" target="_blank" rel="noopener">Top 5 Things to Do in Nara (japan-guide.com)</a>
-        <div class="city-video-note">Japan's 8th-century capital — Todai-ji, the world's largest bronze Buddha, and 1,000 freely roaming deer</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num" style="background:var(--coral)">H</div>
-          <div><div class="city-name">Hiroshima</div><div class="city-days">Extension Day 13 · Peace Museum · Atomic Bomb Dome</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=Qy8SCnJWEkE" target="_blank" rel="noopener">Top 5 Things to Do in Hiroshima (japan-guide.com)</a>
-        <div class="city-video-note">A city rebuilt as a symbol of peace — the Peace Park, museum, and Dome are all on Day 13</div>
-      </div>
-
-      <div class="city-card">
-        <div class="city-card-header">
-          <div class="city-num" style="background:var(--coral)">M</div>
-          <div><div class="city-name">Miyajima Island</div><div class="city-days">Extension Day 14 · Floating torii · Itsukushima Shrine</div></div>
-        </div>
-        <a class="city-video" href="https://www.youtube.com/watch?v=EBGmwKz8d18" target="_blank" rel="noopener">Top 5 Best Places to Visit in Miyajima (2025)</a>
-        <div class="city-video-note">The sacred island's floating torii, Itsukushima Shrine, and Daisho-in Temple — all on your Day 14 itinerary</div>
-      </div>
-
-    </div>
+    <div class="day-list" id="day-list"></div>
   </section>
 
 </main>
 
 <footer>
-  Built for your <span>Smithsonian Journeys — Eternal Japan</span> trip · Departing Aug 31, 2026
+  Built for your <span>Smithsonian Journeys — Panama &amp; Costa Rica by Sea</span> trip · Feb 18–28, 2027
 </footer>
 
 <script>
-const tripDate = new Date("2026-08-31");
-const now = new Date();
-const days = Math.max(0, Math.ceil((tripDate - now) / (24*60*60*1000)));
-document.getElementById("days-left").textContent = days;
+// ---------- Countdown ----------
+(function () {
+  const trip = new Date(2027, 1, 18); // Feb 18, 2027 local
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const days = Math.max(0, Math.round((trip - today) / 86400000));
+  document.getElementById("days-left").textContent = days;
+})();
 
-const weeks = [
-  { phase:"foundation", color:"#3d4a7a", tag:"Foundation", dateRange:"May 19–25", title:"How Japan came to be", sessions:[
-    { num:1, title:"The big picture: Japan's story in 10 minutes", desc:"A fast orientation — islands, isolation, emperors, and the modern leap.", res:[{type:"watch",label:"History of Japan (Bill Wurtz, 9 min)",url:"https://www.youtube.com/watch?v=Mh5LY4Mz15o",note:"Irreverent but surprisingly accurate"}]},
-    { num:2, title:"Shinto: Japan's ancient soul", desc:"The animist belief system underlying nearly every shrine you'll visit.", res:[{type:"read",label:"What is Shinto? (BBC Religion)",url:"https://www.bbc.co.uk/religion/religions/shinto/ataglance/glance.shtml",note:"~10 min read"},{type:"watch",label:"Shintoism Explained (Cogito, 22 min)",url:"https://www.youtube.com/watch?v=mX8cz1LEeXw",note:"Covers kami, the creation story, purification rituals, shrines, and how Shinto coexists with Buddhism — everything you'll see at the shrines on your tour"}]},
-    { num:3, title:"Buddhism arrives in Japan", desc:"How Buddhism sailed from Korea in 552 CE and reshaped Japanese culture.", res:[{type:"watch",label:"How did Japan become Buddhist? (Kings and Generals, ~15 min)",url:"https://www.youtube.com/watch?v=u0Zrwqh3GEc",note:"Animated historical documentary — covers the arrival, the Soga clan, Prince Shōtoku, and the early temples you'll visit in Nara"}]}
-  ]},
-  { phase:"foundation", color:"#3d4a7a", tag:"Foundation", dateRange:"May 26–Jun 1", title:"Emperors, shoguns & samurai", sessions:[
-    { num:4, title:"The emperor and the shogun", desc:"Why Japan had two rulers for centuries — and what that tension produced.", res:[{type:"read",label:"Shogun (World History Encyclopedia)",url:"https://www.worldhistory.org/Shogun/",note:"~10 min, no login required — covers all three shogunates from 1192 to the Meiji Restoration in 1868"}]},
-    { num:5, title:"The samurai class", desc:"Bushido, swords, and why samurai culture still pervades modern Japan.", res:[{type:"read",label:"Samurai (World History Encyclopedia)",url:"https://www.worldhistory.org/Samurai/",note:"Covers Bushido, ritual suicide, the warrior code, and the Edo-period samurai you'll see depicted in museums in Kanazawa and Tokyo — no login required"},{type:"watch",label:"History of the Samurai — Full Documentary (45 min)",url:"https://www.youtube.com/watch?v=688y9sCCV50",note:"Comprehensive documentary covering the entire arc of samurai history — watch in parts if needed"}]},
-    { num:6, title:"The Edo period (1600–1868)", desc:"Two and a half centuries of peace, isolation, and the flowering of arts.", res:[{type:"read",label:"The Way of the Shogun (Smithsonian Magazine)",url:"https://www.smithsonianmag.com/travel/way-shogun-180975196/",note:"A 2020 travel piece following an ancient road once walked by samurai and poets, in search of the soul of modern Japan"},{type:"read",label:"The Age of Edo (Smithsonian Magazine)",url:"https://www.smithsonianmag.com/arts-culture/the-age-of-edo-63338132/",note:"Covers the arts, culture, and isolation that shaped the Japan you'll visit"}]}
-  ]},
-  { phase:"places", color:"#2e6b5e", tag:"Places", dateRange:"Jun 2–8", title:"Tokyo — the city that keeps reinventing itself", sessions:[
-    { num:7, title:"From Edo to Tokyo", desc:"How a shogun's castle town became one of the world's great megacities.", res:[{type:"read",label:"Tokyo (Britannica)",url:"https://www.britannica.com/place/Tokyo",note:"Full history from fishing village to megacity — ~10 min"},{type:"watch",label:"Edo-Tokyo Museum virtual tour (10 min)",url:"https://www.youtube.com/watch?v=1S5VB8RlHoI",note:"Previews the museum on your itinerary"}]},
-    { num:8, title:"Asakusa and Senso-ji", desc:"The oldest temple district in Tokyo — your first major stop on Day 2.", res:[{type:"read",label:"Senso-ji Temple history (Japan Guide)",url:"https://www.japan-guide.com/e/e3001.html",note:"~7 min read"},{type:"watch",label:"Sensoji in Asakusa — The Most Iconic Temple in Tokyo (documentary, 15 min)",url:"https://www.youtube.com/watch?v=zfFTbdpTJUc",note:"Documentary focusing on the temple's 1,400-year history and religious significance"}]},
-    { num:9, title:"The Imperial Palace", desc:"The emperor's residence and its layered history from shogunal fortress.", res:[{type:"read",label:"Tokyo Imperial Palace (Japan Guide)",url:"https://www.japan-guide.com/e/e3017.html",note:"History and visitor guide for the palace on your Day 3 itinerary"},{type:"watch",label:"Edo Castle to Tokyo's Imperial Palace — history explained (YouTube, 12 min)",url:"https://www.youtube.com/watch?v=-_owF7pCz6w",note:"Traces the site from Tokugawa shogunal fortress to the emperor's residence — covers exactly what you'll see on Day 3"}]}
-  ]},
-  { phase:"places", color:"#2e6b5e", tag:"Places", dateRange:"Jun 9–15", title:"Mt. Fuji and the Japanese landscape", sessions:[
-    { num:10, title:"Why Mt. Fuji is sacred", desc:"The mountain as spiritual symbol, artistic subject, and national identity.", res:[{type:"read",label:"Mount Fuji: enduring powerful force (Smithsonian Magazine)",url:"https://www.smithsonianmag.com/travel/mount-fuji-endures-powerful-force-japan-180962782/",note:"~10 min — referenced in your tour materials"}]},
-    { num:11, title:"Hokusai's 36 Views of Fuji", desc:"The woodblock prints that made Mt. Fuji iconic worldwide.", res:[{type:"read",label:"The Great Wave — Hokusai (SmartHistory)",url:"https://smarthistory.org/hokusai-under-the-wave-off-kanagawa-the-great-wave/",note:"SmartHistory is the world's most-visited art history resource — scholarly but very readable"},{type:"watch",label:"Beyond the Great Wave: Hokusai at 90 (SmartHistory/YouTube, 7 min)",url:"https://www.youtube.com/watch?v=SnAdZnJ5b1A",note:"SmartHistory conversation with a Freer Gallery curator — same excellent quality as the written essay"}]},
-    { num:12, title:"Japanese landscape design", desc:"The philosophy behind the gardens you'll walk through in Kyoto and Kanazawa.", res:[{type:"read",label:"Japanese Garden: Ideals and Aims of Garden Design (Britannica)",url:"https://www.britannica.com/art/Japanese-garden/Ideals-and-aims-of-garden-design",note:"Verified working — the philosophical and historical foundations of garden design"},{type:"read",label:"The Allure of Japanese Gardens (SANTEN Design)",url:"https://www.santenjapan.com/japanese-garden/",note:"Verified working — explains the actual garden types (karesansui, kaiyūshiki stroll gardens, roji tea gardens) with real examples, including Kenrokuen itself"},{type:"watch",label:"Zen Garden (Karesansui, Japanese Dry Garden) Explained in 4 minutes",url:"https://www.youtube.com/watch?v=z8CJaHtl9Sk",note:"Short, focused intro to the dry rock garden style you'll see at temples in Kyoto"}]}
-  ]},
-  { phase:"places", color:"#2e6b5e", tag:"Places", dateRange:"Jun 16–22", title:"Kanazawa — Japan's hidden gem", sessions:[
-    { num:13, title:"Kenrokuen: one of Japan's top 3 gardens", desc:"History and design of the garden you'll tour — 'the garden of six attributes.'", res:[{type:"read",label:"Kenrokuen Garden (Japan National Tourism Organization)",url:"https://www.japan.travel/en/spot/1399/",note:"Official tourism authority page — verified working, ~6 min read"},{type:"watch",label:"Kenrokuen Garden, Kanazawa in 4K — Japan As It Truly Is",url:"https://www.youtube.com/watch?v=riB-vzWNKLM",note:"Walk the garden before you walk it — beautiful visual preview of every pond, lantern, and tea house"}]},
-    { num:14, title:"Gold leaf: Kanazawa's craft", desc:"Why 99% of Japan's gold leaf comes from this one city.", res:[{type:"read",label:"Kanazawa Gold Leaf Craft (Japan National Tourism Organization)",url:"https://www.japan.travel/en/japans-local-treasures/kanazawa-gold-leaf-craft/",note:"Official tourism authority page — verified working. You'll visit a gold leaf gallery on your tour"},{type:"watch",label:"400 Years of Gold Mastery: Kanazawa's Gold Leaf Artisans",url:"https://www.youtube.com/watch?v=4N-tdbSqqPo",note:"Watch artisans hammer gold to 1/10,000th of a mm — the same craft you'll see demonstrated on your tour"}]},
-    { num:15, title:"The geisha tradition", desc:"Kanazawa has one of Japan's surviving geisha districts — the real story.", res:[{type:"read",label:"Geisha (Britannica)",url:"https://www.britannica.com/art/geisha",note:"Clear, factual overview — separates history from myth before you visit Kanazawa's geisha district"},{type:"watch",label:"Geisha in 8 Minutes: Myths & Facts (YouTube)",url:"https://www.youtube.com/watch?v=9N5yPgnWhao",note:"Concise and well-researched — separates Hollywood myth from historical fact"}]}
-  ]},
-  { phase:"culture", color:"#b8860b", tag:"Culture", dateRange:"Jun 23–29", title:"Temples, shrines & sacred space", sessions:[
-    { num:16, title:"Temples vs. shrines: what's the difference?", desc:"A practical guide so you know what you're seeing — Buddhist vs. Shinto.", res:[{type:"read",label:"The Differences Between Temples and Shrines in Japan (Voyapon)",url:"https://voyapon.com/difference-temple-shrine-japan/",note:"~10 min — very practical for your trip, verified working"},{type:"watch",label:"Temples and Shrines in Japan: Key Differences Explained! (YouTube, 2024)",url:"https://www.youtube.com/watch?v=_uWdar2jJOE",note:"Quick visual guide with real examples — exactly what you'll need when standing in front of the gate"}]},
-    { num:17, title:"Zen Buddhism", desc:"The philosophy behind rock gardens, minimalist architecture, and mindfulness.", res:[{type:"read",label:"Zen (Britannica)",url:"https://www.britannica.com/topic/Zen",note:"Verified working — covers the philosophy, rock gardens, and why Zen shaped so much of Japanese culture"},{type:"watch",label:"Zen Gardens — Japan",url:"https://www.youtube.com/watch?v=l2eTDm0Ed0s",note:"Short, beautiful introduction to the dry rock gardens you'll encounter at Kyoto's temples"}]},
-    { num:18, title:"Nara: Japan's original capital", desc:"Giant Buddha, sacred deer, and the city that predates Kyoto.", res:[{type:"read",label:"Nara (Japan National Tourism Organization)",url:"https://www.japan.travel/en/destinations/kansai/nara/",note:"Verified working — you have a full day in Nara on the tour"}]}
-  ]},
-  { phase:"culture", color:"#b8860b", tag:"Culture", dateRange:"Jun 30–Jul 6", title:"Kyoto — the soul of traditional Japan", sessions:[
-    { num:19, title:"Kyoto's 1,200 year history", desc:"Imperial capital for over a millennium — why it's so different from Tokyo.", res:[{type:"read",label:"Kyoto (Britannica)",url:"https://www.britannica.com/place/Kyoto",note:"History of the imperial capital from 794 to today — ~10 min"},{type:"watch",label:"Imperial House of Japan: Kyoto — The Old Capital (documentary, 2024)",url:"https://www.youtube.com/watch?v=wJd3aDytwAM",note:"Covers Kyoto's 1,200 years as imperial capital and the Yamato dynasty — exactly the context you need before arriving"}]},
-    { num:20, title:"Nijo Castle and the end of the shogunate", desc:"The castle where the last shogun returned power to the emperor in 1867.", res:[{type:"read",label:"Smithsonian Virtual Journey: Eternal Japan",url:"https://www.smithsonianjourneys.org/virtual-journeys/eternal-japan-virtual-tour/",note:"Verified working — Smithsonian's own resource, referenced in your tour"},{type:"watch",label:"Is Nijo Castle Worth Visiting? A Complete Guide (YouTube, 2025)",url:"https://www.youtube.com/watch?v=lIWbjr47-RI",note:"UNESCO World Heritage history and politics — the castle where Japan's history changed forever"}]},
-    { num:21, title:"The Meiji Restoration", desc:"The 1868 revolution that modernized Japan in a single generation.", res:[{type:"read",label:"Meiji Restoration (World History Encyclopedia)",url:"https://www.worldhistory.org/Meiji_Restoration/",note:"~10 min, no login required"},{type:"watch",label:"The Meiji Restoration & Empire of Japan (Ten Minute History, 10 min)",url:"https://www.youtube.com/watch?v=Oc_un-o4hGc",note:"Concise, well-produced overview — exactly the right length and depth"}]}
-  ]},
-  { phase:"culture", color:"#b8860b", tag:"Culture", dateRange:"Jul 7–13", title:"Art, craft & aesthetic", sessions:[
-    { num:22, title:"The tea ceremony", desc:"Chado — 'the way of tea' — and what a 20-minute ritual says about Japanese culture.", res:[{type:"read",label:"Japanese Tea Ceremony (World History Encyclopedia)",url:"https://www.worldhistory.org/Japanese_Tea_Ceremony/",note:"Verified working — history and philosophy of the ceremony you'll participate in"},{type:"watch",label:"Japanese Tea Ceremony (Chanoyu) Explained in 8 minutes",url:"https://www.youtube.com/watch?v=d1XiV6pM7UY",note:"Clear walkthrough of what to expect — useful since you'll participate in a tea ceremony in Kyoto"}]},
-    { num:23, title:"Ikebana and wabi-sabi", desc:"The aesthetics of imperfection and impermanence — key to understanding Japanese art.", res:[{type:"read",label:"Wabi-sabi: the beauty of imperfection (BBC)",url:"https://www.bbc.com/culture/article/20170928-wabi-sabi-the-japanese-philosophy-for-a-perfectly-imperfect-life",note:"~8 min"},{type:"watch",label:"Wabi Sabi Explained: The Beauty of Imperfection in Japanese Aesthetics (YouTube, 2024)",url:"https://www.youtube.com/watch?v=0JsWIihKpu4",note:"The philosophy behind every aged stone lantern and asymmetric tea bowl you'll encounter"}]},
-    { num:24, title:"Calligraphy as art", desc:"Your tour visits calligrapher Koshun Masunaga — background on this ancient practice.", res:[{type:"read",label:"Japanese Calligraphy (Britannica)",url:"https://www.britannica.com/art/calligraphy/East-Asia",note:"History and significance of the art form you'll witness in person"},{type:"watch",label:"The History of Japanese Calligraphy (YouTube)",url:"https://www.youtube.com/watch?v=jWMszlKhQ2s",note:"Brief history of shodo — the meditative art form you'll see demonstrated by master calligrapher Koshun Masunaga"}]}
-  ]},
-  { phase:"culture", color:"#b8860b", tag:"Culture", dateRange:"Jul 14–20", title:"Daily life, food & social customs", sessions:[
-    { num:25, title:"The ryokan experience", desc:"You'll overnight in one — tatami, yukata robes, onsen baths, kaiseki meals.", res:[{type:"read",label:"Ryokan: what to expect (Japan Guide)",url:"https://www.japan-guide.com/e/e2029.html",note:"Verified working — practical and cultural, ~8 min"},{type:"watch",label:"Staying at a Traditional Japanese Inn — Ryokan & Onsen Etiquette (japan-guide.com)",url:"https://www.youtube.com/watch?v=FdYiNdI2kPE",note:"From the same site as the read — walks you through exactly what to expect on arrival, in the bath, and at dinner"}]},
-    { num:26, title:"Japanese food culture", desc:"More than sushi: the philosophy of Japanese cuisine and what you'll eat.", res:[{type:"read",label:"Gastronomy (Japan National Tourism Organization)",url:"https://www.japan.travel/en/gastronomy/",note:"Verified working — overview of what you'll eat: kaiseki, ramen, sushi, yakitori, and more"},{type:"watch",label:"Kaiseki Explained: Inside a Traditional Japanese Ryokan Dinner (YouTube, 2026)",url:"https://www.youtube.com/watch?v=kNYvIOTCO20",note:"Connects perfectly to your ryokan night — explains each course of the kaiseki dinner you'll be served"}]},
-    { num:27, title:"Social customs and etiquette", desc:"Bowing, shoes, gifts, chopsticks — things that matter and why.", res:[{type:"read",label:"Japan etiquette guide (Tofugu)",url:"https://www.tofugu.com/japan/japanese-manners/",note:"~10 min — saves you embarrassment! If this link doesn't load, search \"tofugu japanese manners\""},{type:"watch",label:"How to Bow in Japan and Manners — Business Etiquette (japan-guide.com)",url:"https://www.youtube.com/watch?v=ytmdQC6OxPU",note:"The bowing video from japan-guide.com — practical and short, covers the basics of every greeting you'll give"}]}
-  ]},
-  { phase:"hiroshima", color:"#c85a35", tag:"Hiroshima", dateRange:"Jul 21–27", title:"Japan in World War II", sessions:[
-    { num:28, title:"Japan's road to war", desc:"How a modernizing nation became an imperial power — context for Hiroshima.", res:[{type:"read",label:"Japan: Militarism, Imperialism, WWII (Britannica)",url:"https://www.britannica.com/place/Japan/The-rise-of-the-militarists",note:"Verified working — how Japan transformed from a Meiji reformer into an imperial aggressor, essential Hiroshima context"},{type:"watch",label:"Rise of Ultranationalism in Japan — Pacific War #0.3 (Kings and Generals)",url:"https://www.youtube.com/watch?v=7vQ6nxBRGd8",note:"The most authoritative history channel on military history — traces Japan's slide toward ultranationalism in the 1920s–30s"}]},
-    { num:29, title:"The Pacific War from Japan's perspective", desc:"A look beyond the American narrative — essential for visiting Hiroshima respectfully.", res:[{type:"read",label:"The Pacific War (Britannica)",url:"https://www.britannica.com/event/Pacific-War",note:"~12 min — focus on the 1944–45 section. If this link doesn't load, search \"britannica pacific war\""},{type:"watch",label:"World War II: Crash Course World History #38",url:"https://www.youtube.com/watch?v=Q78COTwT7nE",note:"John Green's clear, nuanced overview of WWII including Japan's role and the Pacific — good emotional preparation before Hiroshima"}]},
-    { num:30, title:"The atomic bomb decision", desc:"The debate around Truman's decision — still contested, worth knowing.", res:[{type:"read",label:"Harry Truman's Decision to Use the Atomic Bomb (National Park Service)",url:"https://www.nps.gov/articles/trumanatomicbomb.htm",note:"Verified working — covers both the military rationale and the ongoing ethical debate, good preparation for the Peace Memorial Museum"}]}
-  ]},
-  { phase:"hiroshima", color:"#c85a35", tag:"Hiroshima", dateRange:"Jul 28–Aug 3", title:"Hiroshima: destruction and rebirth", sessions:[
-    { num:31, title:"August 6, 1945", desc:"The bombing of Hiroshima — what happened that morning.", res:[{type:"read",label:"The Atomic Bombing of Hiroshima and Nagasaki (National Archives)",url:"https://visit.archives.gov/whats-on/explore-exhibits/atomic-bombing-hiroshima-and-nagasaki",note:"Verified working — primary documents and photos from the US National Archives, sobering and authoritative"},{type:"watch",label:"Hiroshima: Dropping The Bomb (BBC Documentary)",url:"https://www.youtube.com/watch?v=3wxWNAM8Cso",note:"BBC Documentary — first-hand accounts from survivors of what happened that morning. Powerful preparation for your visit"}]},
-    { num:32, title:"The Peace Memorial Museum", desc:"Preview of the museum you'll visit — understand what you're about to see.", res:[{type:"read",label:"Hiroshima Peace Memorial Museum (official site)",url:"https://hpmmuseum.jp/?lang=eng",note:"Verified working — official museum site in English"},{type:"watch",label:"Hiroshima: Visiting the Peace Memorial Park & Museum (YouTube, 2025)",url:"https://www.youtube.com/watch?v=SwKgvydoF3Y",note:"A visitor's moving walkthrough — emotionally prepares you for what you'll experience in person"}]},
-    { num:33, title:"Hiroshima today: a city of peace", desc:"How the city rebuilt and what 'never again' means to its residents.", res:[{type:"read",label:"70 Years After Hiroshima (Britannica)",url:"https://www.britannica.com/story/70-years-after-hiroshima",note:"Verified working — the city's remarkable recovery and its message to the world"},{type:"watch",label:"Hiroshima — A story of survival, loss and forgiveness (DW Documentary, 2025)",url:"https://www.youtube.com/watch?v=gJCMtP711qs",note:"A family torn apart by the bomb and reunited decades later — moving and optimistic, the perfect close to the Hiroshima sessions"}]}
-  ]},
-  { phase:"hiroshima", color:"#c85a35", tag:"Hiroshima", dateRange:"Aug 4–10", title:"Miyajima and the Inland Sea", sessions:[
-    { num:34, title:"The floating torii of Itsukushima", desc:"One of Japan's most iconic sights — why the shrine is built partly in the sea.", res:[{type:"read",label:"Miyajima / Itsukushima Shrine (Japan Guide)",url:"https://www.japan-guide.com/e/e3450.html",note:"~7 min — you'll visit this on the Hiroshima extension"},{type:"watch",label:"Miyajima Island & Itsukushima Shrine tour (YouTube, 12 min)",url:"https://www.youtube.com/watch?v=LVL8bRrSFfk",note:"Preview of the floating torii, deer, and shrine you'll visit on the Hiroshima extension"}]},
-    { num:35, title:"Japan's UNESCO World Heritage sites", desc:"Quick overview of the sites you'll encounter and what makes them significant.", res:[{type:"read",label:"Japan UNESCO World Heritage Sites (Japan Guide)",url:"https://www.japan-guide.com/e/e2251.html",note:"Verified working — lists and describes every site, useful to cross-reference with your itinerary"}]},
-    { num:36, title:"The bullet train — shinkansen", desc:"More than transport: symbol of Japan's postwar rebirth.", res:[{type:"read",label:"History of the shinkansen (Japan Rail Pass)",url:"https://www.jrailpass.com/blog/history-of-the-shinkansen",note:"~8 min — you'll ride one on the extension. If this link doesn't load, search \"jrailpass history of the shinkansen\""},{type:"watch",label:"How This Train Changed The World (Mustard, YouTube)",url:"https://www.youtube.com/watch?v=T3LLgzO_PrI",note:"Mustard is one of YouTube's best engineering history channels — explains the 1964 launch and why the shinkansen was a global turning point"}]}
-  ]},
-  { phase:"wrap", color:"#6b5e4a", tag:"Final Prep", dateRange:"Aug 11–17", title:"Japan now: contemporary culture", sessions:[
-    { num:37, title:"Japan's postwar economic miracle", desc:"How Japan went from ruins to world's second-largest economy in 30 years.", res:[{type:"read",label:"Japan's postwar economic miracle (Britannica)",url:"https://www.britannica.com/topic/economic-miracle",note:"Concise overview of the 'economic miracle' that rebuilt Japan after the war. If this link doesn't load, search \"britannica economic miracle\""},{type:"watch",label:"How Japan Went From WWII Devastation To Economic Superpower (YouTube, 2025)",url:"https://www.youtube.com/watch?v=a_q_EwX2FEI",note:"From ashes to the world's second-largest economy in 30 years — the full story in one clear video"}]},
-    { num:38, title:"Japanese pop culture and soft power", desc:"Anime, manga, J-pop — and why the world is fascinated with Japanese aesthetics.", res:[{type:"read",label:"Japan's cultural soft power (BBC)",url:"https://www.bbc.com/culture/article/20130613-japans-global-cultural-power",note:"~8 min. If this link doesn't load, search \"bbc japan global cultural power\""}]},
-    { num:39, title:"Japan and the future", desc:"Aging population, robots, tradition vs. modernity — the tensions shaping Japan today.", res:[{type:"read",label:"Japan's demographic crisis (BBC)",url:"https://www.bbc.com/news/world-asia-55226671",note:"BBC overview of the aging population challenge and how Japan is responding. If this link doesn't load, search \"bbc japan demographic crisis\""}]}
-  ]},
-  { phase:"wrap", color:"#6b5e4a", tag:"Final Prep", dateRange:"Aug 18–30", title:"Final week: polish and excitement", sessions:[
-    { num:40, title:"Essential Japanese phrases in action", desc:"You don't need to be fluent — 15 phrases will delight your hosts.", res:[{type:"read",label:"Japanese Phrases for Tourists (FluentU)",url:"https://www.fluentu.com/blog/japanese/japanese-travel-phrases/",note:"Verified working — essential phrases with pronunciation guide, great companion to the phrases section of this guide"}]},
-    { num:41, title:"Pico Iyer on Kyoto", desc:"The celebrated travel writer's meditation on living in Japan — beautiful final read.", res:[{type:"read",label:"In Kyoto, Feeling Forever Foreign (Pico Iyer, Smithsonian Magazine)",url:"https://www.smithsonianmag.com/travel/in-kyoto-feeling-forever-foreign-78544/",note:"Verified working — cited in your Smithsonian tour materials, a beautiful way to close out the study guide"},{type:"watch",label:"Pico Iyer: Where is home? (TED Talk, 14 min)",url:"https://www.youtube.com/watch?v=jFICRFKtAc4",note:"Pico Iyer on belonging, Kyoto, and the meaning of home — a beautiful final video to close out the 14 weeks"}]},
-    { num:42, title:"Your tour from start to finish", desc:"Walk through the full itinerary one more time — now you'll recognize everything.", res:[{type:"read",label:"Eternal Japan tour overview (Smithsonian Journeys)",url:"https://www.smithsonianjourneys.org/tours/japan/",note:"Verified working — your official tour page, read through the full itinerary with fresh eyes after 14 weeks of study"},{type:"watch",label:"Smithsonian Virtual Journey: Eternal Japan",url:"https://www.smithsonianjourneys.org/virtual-journeys/eternal-japan-virtual-tour/",note:"Verified working — save this for last"}]}
-  ]}
+// ---------- Study guide data (every link opened and checked Oct 9, 2026) ----------
+const phases = {
+  found:  { label: "Foundation",           color: "#3d4a7a" },
+  costa:  { label: "Costa Rica coast",     color: "#2e7d5b" },
+  panama: { label: "Darién & Panama City", color: "#b7862b" },
+  canal:  { label: "The Canal",            color: "#1f5f8b" },
+  carib:  { label: "Caribbean & Gamboa",   color: "#c0533a" }
+};
+
+const lessons = [
+  { phase:"found", title:"The land bridge that changed the world",
+    desc:"Panama rose from the sea about 2.8 million years ago, joining two continents, splitting two oceans, and setting off a great swap of animals between North and South America.",
+    trip:"Context for the whole trip, and for the Biomuseo on Feb 23",
+    res:[
+      {type:"read", label:"Recent Connection Between North and South America Reaffirmed", src:"Smithsonian Insider", meta:"~4 min", url:"https://insider.si.edu/2016/08/recent-connection-north-south-america-reaffirmed/", note:"STRI scientists weigh the geologic, fossil and genetic evidence for when the isthmus closed"},
+      {type:"watch", label:"How Panama Changed the World", src:"NOVA PBS", meta:"3:42", url:"https://www.youtube.com/watch?v=YR2oKtWk7Z0"}
+    ]},
+  { phase:"found", title:"Costa Rica: from deforestation to conservation model",
+    desc:"How a country that lost much of its forest paid landowners to protect it, banned new clearing, and built an ecotourism economy around what grew back.",
+    trip:"Your one Costa Rican port day is Feb 20",
+    res:[
+      {type:"read", label:"How Costa Rica Reversed Deforestation and Became an Environmental Model", src:"Earth.Org", meta:"~5 min", url:"https://earth.org/how-costa-rica-reversed-deforestation/"},
+      {type:"watch", label:"Forest Conservation Pays Off in Costa Rica", src:"World Bank Group", meta:"2:08", url:"https://www.youtube.com/watch?v=HafKimQZzt8"},
+      {type:"watch", label:"Why Costa Rica Has No Military", src:"The Why Minutes", meta:"2:59", url:"https://www.youtube.com/watch?v=6VZA2GUpNzY", note:"Optional — the 1948 decision that freed money for schools and parks"}
+    ]},
+  { phase:"costa", title:"Manuel Antonio National Park",
+    desc:"A small park where rainforest meets the beach, and one of the easiest places in Costa Rica to see monkeys and sloths.",
+    trip:"Feb 20 · Quepos",
+    res:[
+      {type:"read", label:"Manuel Antonio National Park: Costa Rica's Jewel of Biodiversity", src:"LAC Geo", meta:"~3 min", url:"https://lacgeo.com/node/133"},
+      {type:"watch", label:"Manuel Antonio National Park — Beaches, Hiking, Wildlife with Sloth and Monkeys", src:"Chopstick Trip", meta:"4:08", url:"https://www.youtube.com/watch?v=VVS8FDwxj2Y"}
+    ]},
+  { phase:"costa", title:"Sloths: life in the slow lane",
+    desc:"Why sloths move so little, sleep so much, and come down from the trees only about once a week.",
+    trip:"Feb 20 at Manuel Antonio, and the Gamboa sloth sanctuary on Feb 27",
+    res:[
+      {type:"read", label:"Two-toed Sloth", src:"Smithsonian's National Zoo", meta:"~5 min", url:"https://nationalzoo.si.edu/node/6968"},
+      {type:"watch", label:"The Extreme Life Of A Sloth", src:"Insider Science", meta:"4:36", url:"https://www.youtube.com/watch?v=DpV4k3Edr-I"}
+    ]},
+  { phase:"costa", title:"Mangroves: forests in salt water",
+    desc:"How mangrove trees survive in salty, muddy tides, and why their tangled roots shelter so much wildlife and protect the coast.",
+    trip:"Feb 20 Damas Island riverboat option, and the Darién coast",
+    res:[
+      {type:"read", label:"Mangroves", src:"Smithsonian Ocean", meta:"read the first sections, ~10 min", url:"https://ocean.si.edu/ocean-life/plants-algae/mangroves", note:"A long page in sections — the introduction and first few sections are plenty"},
+      {type:"watch", label:"Inside the Mangrove Forest", src:"Living Oceans Foundation", meta:"4:03", url:"https://www.youtube.com/watch?v=cwTZhyA57mA"}
+    ]},
+  { phase:"panama", title:"Darién: Panama's wild frontier",
+    desc:"The vast roadless forest between Panama and Colombia — home to harpy eagles, jaguars and Indigenous communities.",
+    trip:"Feb 22 · Playa Muerto",
+    res:[
+      {type:"read", label:"Darien", src:"Wildlife Conservation Society", meta:"~5 min", url:"https://programs.wcs.org/5greatforests/Wild-Places/Darien"},
+      {type:"watch", label:"Harpy Eagle & More! The Wildlife of Darién Rainforest", src:"Robert E Fuller", meta:"3:34", url:"https://www.youtube.com/watch?v=-E4HILf6qHY"}
+    ]},
+  { phase:"panama", title:"The Emberá people",
+    desc:"River people of the Panama–Colombia border: stilt houses, dugout canoes, body painting with jagua, and a living mix of tradition and tourism.",
+    trip:"Feb 22 · the Emberá welcome at Playa Muerto",
+    res:[
+      {type:"read", label:"The Emberá of Panama", src:"Hektoen International", meta:"~3 min", url:"https://hekint.org/2020/09/02/the-embera-of-panama/"},
+      {type:"watch", label:"Silversea's Guests Meet the Embera People of Panama's Darien Jungle", src:"Silversea", meta:"2:45", url:"https://www.youtube.com/watch?v=8DtZvOxABKg", note:"Another expedition cruise's visit — very close to what you'll experience"}
+    ]},
+  { phase:"panama", title:"Two old cities: Panamá Viejo and Casco Antiguo",
+    desc:"The first Spanish city on the Pacific, burned after Henry Morgan's 1671 raid, and the walled city built to replace it.",
+    trip:"Feb 23 · your choice of Casco Antiguo or Panamá Viejo",
+    res:[
+      {type:"read", label:"Panama Viejo, Archaeological Site", src:"Famous Historic Buildings", meta:"~4 min", url:"https://www.famous-historic-buildings.org.uk/panama-viejo.html"},
+      {type:"watch", label:"Self-Guided Walking Tour of Casco Viejo", src:"Kuratour", meta:"3:54", url:"https://www.youtube.com/watch?v=xyQ6dd4OJZY"}
+    ]},
+  { phase:"panama", title:"The Smithsonian in Panama & the Biomuseo",
+    desc:"Why the Smithsonian runs a major tropical research institute here, and the Gehry museum that tells the isthmus's story.",
+    trip:"Feb 23 · Biomuseo and Punta Culebra with STRI staff",
+    res:[
+      {type:"read", label:"Punta Culebra", src:"Smithsonian Tropical Research Institute", meta:"~5 min", url:"https://stri.si.edu/visit/punta-culebra/"},
+      {type:"read", label:"Frank Gehry's Biomuseo in Panama prepares to open", src:"Dezeen", meta:"~2 min", url:"https://www.dezeen.com/2014/09/18/frank-gehry-biomuseo-panama-completes/amp/"},
+      {type:"watch", label:"Why Panama Holds a Major Key to Our Biodiversity", src:"Smithsonian Channel", meta:"2:01", url:"https://www.youtube.com/watch?v=NcQwFI4fDPU"},
+      {type:"watch", label:"Frank Gehry's Biomuseo | The Panama Series", src:"Crane.tv", meta:"2:52", url:"https://www.youtube.com/watch?v=5h_LUEx3ijI"}
+    ]},
+  { phase:"canal", title:"The French failure",
+    desc:"Ferdinand de Lesseps, fresh from Suez, tried to dig a sea-level canal in 1881. Disease, landslides and financial scandal ended it.",
+    trip:"Background for the Feb 24 transit",
+    res:[
+      {type:"read", label:"The French Attempt", src:"Linda Hall Library", meta:"~5 min", url:"https://lindahall.org/experience/digital-exhibitions/the-land-divided-the-world-united/06-the-french-plan/the-french-attempt"},
+      {type:"watch", label:"Bribery and Fraud: The Ruthless French First Panama Canal Attempt", src:"Margin Notes", meta:"4:21", url:"https://www.youtube.com/watch?v=bTwwNj7F-Z4"}
+    ]},
+  { phase:"canal", title:"The Americans build it (1904–1914)",
+    desc:"Theodore Roosevelt backs Panama's break from Colombia, then the US wins against mosquitoes and mountains to finish the job.",
+    trip:"Background for the Feb 24 transit",
+    res:[
+      {type:"read", label:"TR and the Panama Canal", src:"PBS American Experience", meta:"~8 min", url:"https://www.pbs.org/wgbh/americanexperience/features/TR-panama/"},
+      {type:"watch", label:"How the Panama Canal was built", src:"BBC News", meta:"2:00", url:"https://www.youtube.com/watch?v=q2T7CL9wqyM"}
+    ]},
+  { phase:"canal", title:"How the locks work",
+    desc:"Ships climb about 85 feet to Gatun Lake and back down again — moved entirely by gravity and fresh water, no pumps.",
+    trip:"Feb 24 · you'll pass through all three levels",
+    res:[
+      {type:"read", label:"How Do Canal Locks Work?", src:"Practical Engineering", meta:"~9 min", url:"https://practical.engineering/blog/2020/4/7/how-do-canal-locks-work", note:"Uses the Panama Canal as its main example"},
+      {type:"watch", label:"How Does the Panama Canal Work?", src:"The Panama Canal (official)", meta:"1:03", url:"https://www.youtube.com/watch?v=hoQ7RHyG-EA"},
+      {type:"watch", label:"How Panama Canal Works Animation", src:"How it Works?", meta:"2:31", url:"https://www.youtube.com/watch?v=1NwvCj9CMuw"}
+    ]},
+  { phase:"canal", title:"Handing it over, and building bigger",
+    desc:"The 1977 Torrijos–Carter Treaties, Panama's takeover in 1999, and the 2016 expansion with the new Agua Clara locks.",
+    trip:"Feb 24 transit, and Agua Clara on Feb 26",
+    res:[
+      {type:"read", label:"The Panama Canal and the Torrijos-Carter Treaties", src:"U.S. State Dept., Office of the Historian", meta:"~6 min", url:"https://history.state.gov/milestones/1977-1980/panama-canal"},
+      {type:"watch", label:"Why did the US give up the Panama Canal?", src:"History Matters", meta:"3:40", url:"https://www.youtube.com/watch?v=0t2EE5JZP-M"},
+      {type:"watch", label:"First Trial Transit at Panama Canal Expansion Agua Clara Locks", src:"The Panama Canal (official)", meta:"2:11", url:"https://www.youtube.com/watch?v=xA2TyFxbH9Q"}
+    ]},
+  { phase:"carib", title:"The Guna of San Blas",
+    desc:"How the Guna won self-government after their 1925 revolution, and the molas — layered appliqué panels — worn by Guna women.",
+    trip:"Feb 25 · San Blas Islands",
+    res:[
+      {type:"read", label:"Gunayala: A Living Model of Autonomy and Self-government", src:"Cultural Survival", meta:"~6 min", url:"https://www.culturalsurvival.org/node/15366", note:"Written by two Guna authors"},
+      {type:"watch", label:"Mola: The traditional textile art of Guna women", src:"Northeastern University", meta:"2:32", url:"https://www.youtube.com/watch?v=pd0NhwV4IOw"}
+    ]},
+  { phase:"carib", title:"Fort San Lorenzo, Gatun Lake & Gamboa",
+    desc:"Spain's fort at the mouth of the Chagres, and the man-made lake whose drowned hilltops became islands — including the Smithsonian's Barro Colorado.",
+    trip:"Feb 26–27 · the post-cruise extension",
+    res:[
+      {type:"read", label:"Fortifications on the Caribbean Side of Panama: Portobelo-San Lorenzo", src:"UNESCO World Heritage", meta:"~4 min", url:"https://whc.unesco.org/en/list/135/"},
+      {type:"read", label:"Barro Colorado Island", src:"Smithsonian Tropical Research Institute", meta:"~4 min", url:"https://www.stri.si.edu/visit/barro-colorado"},
+      {type:"watch", label:"Monkey Island & Gatun Lake Tour in Gamboa, Panama", src:"Rayhan and Ziki Show", meta:"3:25", url:"https://www.youtube.com/watch?v=1Ywrf45kIsk"}
+    ]}
 ];
 
-const container = document.getElementById("weeks-container");
-weeks.forEach((w, i) => {
-  const block = document.createElement("div");
-  block.className = "week-block";
+// ---------- Progress (localStorage) ----------
+const STORE_KEY = "panama2027-done";
+let done = {};
+try { done = JSON.parse(localStorage.getItem(STORE_KEY) || "{}") || {}; } catch (e) { done = {}; }
+function saveDone() { try { localStorage.setItem(STORE_KEY, JSON.stringify(done)); } catch (e) {} }
 
-  const header = document.createElement("div");
-  header.className = "week-header";
-  header.innerHTML = `
-    <div class="phase-dot" style="background:${w.color}"></div>
-    <span class="week-num">Wk ${i+1}</span>
-    <span class="week-title-text">${w.title}</span>
-    <span class="week-dates-text">${w.dateRange}</span>
-    <span class="phase-tag" style="background:${w.color}">${w.tag}</span>
-    <span class="chevron-icon">▼</span>
-  `;
+function updateProgress() {
+  const n = lessons.filter((_, i) => done[i + 1]).length;
+  document.getElementById("progress-fill").style.width = (n / lessons.length * 100) + "%";
+  document.getElementById("progress-text").textContent = n + " of " + lessons.length + " done";
+  document.getElementById("done-count").textContent = n + "/" + lessons.length;
+}
 
-  const body = document.createElement("div");
-  body.className = "week-body";
-
-  w.sessions.forEach(s => {
-    const sess = document.createElement("div");
-    sess.className = "session";
-    sess.innerHTML = `
-      <div class="sess-num">#${s.num}</div>
-      <div class="sess-body">
-        <div class="sess-title">${s.title}</div>
-        <div class="sess-desc">${s.desc}</div>
-        ${s.res.map(r => `
-          <div class="resource">
-            <span class="rtype ${r.type}">${r.type === 'read' ? 'Read' : 'Watch'}</span>
-            <div>
-              <a class="rlink" href="${r.url}" target="_blank">${r.label}</a>
-              ${r.note ? `<div class="rnote">${r.note}</div>` : ''}
-            </div>
-          </div>
-        `).join('')}
-      </div>
-    `;
-    body.appendChild(sess);
-  });
-
-  block.appendChild(header);
-  block.appendChild(body);
-  container.appendChild(block);
-
-  header.addEventListener("click", () => {
-    const isOpen = body.classList.contains("vis");
-    body.classList.toggle("vis", !isOpen);
-    header.classList.toggle("open", !isOpen);
-  });
+// ---------- Render lessons ----------
+const legend = document.getElementById("legend");
+Object.values(phases).forEach(p => {
+  legend.insertAdjacentHTML("beforeend",
+    `<div class="legend-item"><div class="legend-dot" style="background:${p.color}"></div>${p.label}</div>`);
 });
 
-// Highlight active nav section on scroll
+const wrap = document.getElementById("lessons");
+lessons.forEach((L, i) => {
+  const num = i + 1;
+  const ph = phases[L.phase];
+  const el = document.createElement("div");
+  el.className = "lesson" + (done[num] ? " done" : "");
+  el.innerHTML = `
+    <div class="lesson-header">
+      <div class="done-box" role="checkbox" tabindex="0" aria-checked="${!!done[num]}" aria-label="Mark lesson ${num} done">✓</div>
+      <span class="lesson-num">${num}</span>
+      <span class="lesson-title">${L.title}</span>
+      <span class="phase-tag" style="background:${ph.color}">${ph.label}</span>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="lesson-body">
+      <div class="lesson-desc">${L.desc}</div>
+      <div class="lesson-trip">📍 ${L.trip}</div>
+      ${L.res.map(r => `
+        <div class="resource">
+          <span class="rtype ${r.type}">${r.type === "read" ? "Read" : "Watch"}</span>
+          <div>
+            <a class="rlink" href="${r.url}" target="_blank" rel="noopener">${r.label}</a><span class="rmeta">${r.meta}</span>
+            <div class="rnote">${r.src}${r.note ? " — " + r.note : ""}</div>
+          </div>
+        </div>`).join("")}
+    </div>`;
+  const box = el.querySelector(".done-box");
+  const toggleDone = (e) => {
+    e.stopPropagation();
+    done[num] = !done[num];
+    if (!done[num]) delete done[num];
+    el.classList.toggle("done", !!done[num]);
+    box.setAttribute("aria-checked", !!done[num]);
+    saveDone(); updateProgress();
+  };
+  box.addEventListener("click", toggleDone);
+  box.addEventListener("keydown", e => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggleDone(e); } });
+  el.querySelector(".lesson-header").addEventListener("click", () => el.classList.toggle("open"));
+  wrap.appendChild(el);
+});
+
+document.getElementById("reset-btn").addEventListener("click", () => {
+  if (!confirm("Clear all lesson check marks?")) return;
+  done = {}; saveDone();
+  document.querySelectorAll(".lesson").forEach(l => l.classList.remove("done"));
+  updateProgress();
+});
+updateProgress();
+
+// ---------- Day-by-day itinerary ----------
+const days = [
+  { cls:"travel", date:"Thu, Feb 18", title:"Fly to San José", desc:"United EWR 3:32 PM → SJO 7:53 PM. Overnight at the DoubleTree Cariari." },
+  { date:"Fri, Feb 19 · Day 1", title:"Embark in Puerto Caldera", desc:"Hospitality suite 9–3 (arrive by 12:30), coach to the port, embarkation 4–5 PM aboard Le Lapérouse.", video:{label:"Le Lapérouse — PONANT", meta:"2:04", url:"https://www.youtube.com/watch?v=XUrJajJXa9s"} },
+  { date:"Sat, Feb 20 · Day 2", title:"Quepos & Manuel Antonio, Costa Rica", desc:"Naturalist walk in the park, a riverboat through the Damas Island mangroves, or rafting on the Savegre River.", video:{label:"Damas Island Mangrove Tour, Manuel Antonio", meta:"2:23", url:"https://www.youtube.com/watch?v=XnCmfY-Xhlg"} },
+  { date:"Sun, Feb 21 · Day 3", title:"At sea", desc:"Lectures from your Smithsonian experts — historian Ralph DeFalco and naturalist Dennis Wille Sáenz. Watch for seabirds from the upper deck." },
+  { date:"Mon, Feb 22 · Day 4", title:"Playa Muerto & Darién National Park", desc:"Zodiac landing at an Emberá village; dances, crafts and an optional waterfall hike.", video:{label:"Embera Tribe of Panama — Life in the rainforest", meta:"3:02", url:"https://www.youtube.com/watch?v=XtdxR3aa--o"} },
+  { date:"Tue, Feb 23 · Day 5", title:"Panama City", desc:"From Fuerte Amador: the Biomuseo, STRI's Punta Culebra, then Casco Antiguo or Panamá Viejo.", video:{label:"Why Everyone Loves Panama City's Amador Causeway", meta:"3:38", url:"https://www.youtube.com/watch?v=QP0fuYCwKn4"} },
+  { date:"Wed, Feb 24 · Day 6", title:"Panama Canal transit", desc:"A full daylight crossing through three levels of locks.", video:{label:"Panama Canal Timelapse", meta:"1:57", url:"https://www.youtube.com/watch?v=fA-pnN54uPw"} },
+  { date:"Thu, Feb 25 · Day 7", title:"San Blas Islands", desc:"Anchor at Cayos Holandeses behind a long reef. Swim, snorkel and meet the Guna.", video:{label:"San Blas, Cayo Holandeses — drone footage", meta:"2:35", url:"https://www.youtube.com/watch?v=hmKYoz8GqEU"} },
+  { cls:"ext", date:"Fri, Feb 26 · Extension day 1", title:"Colón → Agua Clara → Fort San Lorenzo → Gamboa", desc:"Disembark after breakfast, see the expanded locks and the Spanish fort, lunch, then on to Gamboa Rainforest Reserve.", video:{label:"Fort San Lorenzo Aerial View", meta:"2:47", url:"https://www.youtube.com/watch?v=I0Ha13TfEB0"} },
+  { cls:"ext", date:"Sat, Feb 27 · Extension day 2", title:"Gamboa", desc:"Gatun Lake cruise, sloth sanctuary, butterflies, orchids and frogs, then Pipeline Road birding or the aerial tram.", video:{label:"Gamboa Rainforest Resort and Aerial Tramway", meta:"2:23", url:"https://www.youtube.com/watch?v=hzSYRXVE7xQ"} },
+  { cls:"travel", date:"Sun, Feb 28", title:"Fly home", desc:"Transfer to Tocumen (PTY). United PTY 10:00 AM → EWR 3:16 PM." }
+];
+const dl = document.getElementById("day-list");
+days.forEach(d => {
+  dl.insertAdjacentHTML("beforeend", `
+    <div class="day ${d.cls || ""}">
+      <div class="day-date">${d.date}</div>
+      <div class="day-title">${d.title}</div>
+      <div class="day-desc">${d.desc}</div>
+      ${d.video ? `<a class="day-video" href="${d.video.url}" target="_blank" rel="noopener">${d.video.label} <span class="rmeta">${d.video.meta}</span></a>` : ""}
+    </div>`);
+});
+
+// ---------- Nav highlight ----------
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll("nav a[href^='#']");
 window.addEventListener("scroll", () => {
   let current = "";
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
-  navLinks.forEach(a => { a.classList.toggle("active", a.getAttribute("href") === "#"+current); });
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 90) current = s.id; });
+  navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
 });
-</script>
-<style>
-  .speak-btn {
-    background: none;
-    border: 1px solid var(--warm-mid);
-    border-radius: 50%;
-    width: 30px; height: 30px;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
-    transition: background 0.15s, border-color 0.15s;
-    flex-shrink: 0;
-    padding: 0;
-  }
-  .speak-btn:hover { background: var(--warm-mid); border-color: var(--muted); }
-  .speak-btn.speaking { background: #e6f4ec; border-color: var(--teal); animation: pulse-ring 0.8s ease infinite; }
-  @keyframes pulse-ring {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(46,107,94,0.3); }
-    50% { box-shadow: 0 0 0 4px rgba(46,107,94,0.1); }
-  }
-</style>
 
-<script>
+// ---------- Spanish phrases with speech ----------
 const phrases = [
-  { jp:"ありがとうございます", romaji:"Arigatou gozaimasu", meaning:"Thank you (formal) — use this constantly", note:"The more formal version; always safe to use" },
-  { jp:"すみません", romaji:"Sumimasen", meaning:"Excuse me / Sorry — your most-used word", note:"Getting attention, passing someone, apologizing — all-purpose" },
-  { jp:"おはようございます", romaji:"Ohayou gozaimasu", meaning:"Good morning", note:"Used until about 10am; your guides will love this" },
-  { jp:"こんにちは", romaji:"Konnichiwa", meaning:"Hello / Good afternoon", note:"Midday greeting; said with a slight bow" },
-  { jp:"いただきます", romaji:"Itadakimasu", meaning:'Said before eating — "I humbly receive"', note:"Mandatory before meals. Skipping it is like eating without saying grace" },
-  { jp:"ごちそうさまでした", romaji:"Gochisousama deshita", meaning:'Said after eating — "Thank you for the meal"', note:"Said to your host or to the restaurant staff as you leave" },
-  { jp:"おいしい！", romaji:"Oishii!", meaning:'"Delicious!" — use with feeling', note:"One word that will make every chef and host beam" },
-  { jp:"どこですか？", romaji:"Doko desu ka?", meaning:'"Where is ___?" — point at map or sign', note:'Combine with any noun: "Toire doko desu ka?" = where\'s the toilet?' },
-  { jp:"いくらですか？", romaji:"Ikura desu ka?", meaning:'"How much does this cost?"', note:"Point at the item; shopkeepers may write the number for you" },
-  { jp:"写真を撮ってもいいですか？", romaji:"Shashin wo totte mo ii desu ka?", meaning:'"May I take a photo?"', note:"Always ask before photographing people or private spaces" },
-  { jp:"英語を話せますか？", romaji:"Eigo wo hanasemasu ka?", meaning:'"Do you speak English?"', note:"Asked politely; many younger Japanese will try to help" },
-  { jp:"わかりません", romaji:"Wakarimasen", meaning:'"I don\'t understand"', note:"Honest and respectful; better than guessing" },
-  { jp:"ゆっくり話してください", romaji:"Yukkuri hanashite kudasai", meaning:'"Please speak slowly"', note:"Always met with patience and smiles" },
-  { jp:"トイレはどこですか？", romaji:"Toire wa doko desu ka?", meaning:'"Where is the restroom?"', note:"Japanese public restrooms are extraordinarily clean — seek them out" },
-  { jp:"よろしくお願いします", romaji:"Yoroshiku onegaishimasu", meaning:'"I\'m in your care" — meet a guide, start a meal', note:"No exact translation; said when beginning any relationship or transaction. Deeply Japanese." }
+  { es:"Buenos días", say:"BWAY-nohs DEE-ahs", meaning:"Good morning", note:"Used until about noon" },
+  { es:"Buenas tardes", say:"BWAY-nahs TAR-dehs", meaning:"Good afternoon", note:"From midday until dark" },
+  { es:"Mucho gusto", say:"MOO-choh GOOS-toh", meaning:"Nice to meet you", note:"When you meet a guide or host" },
+  { es:"Gracias", say:"GRAH-see-ahs", meaning:"Thank you", note:"\"Muchas gracias\" for extra warmth" },
+  { es:"Por favor", say:"por fah-VOR", meaning:"Please", note:"" },
+  { es:"Con permiso", say:"kohn pehr-MEE-soh", meaning:"Excuse me (to pass by)", note:"Moving through a crowd or a narrow boat" },
+  { es:"Disculpe", say:"dees-KOOL-peh", meaning:"Excuse me / sorry", note:"To get someone's attention" },
+  { es:"¡Pura vida!", say:"POO-rah VEE-dah", meaning:"\"Pure life\" — Costa Rica's all-purpose phrase", note:"Hello, thanks, all good. Ticos will light up." },
+  { es:"¿Habla inglés?", say:"AH-blah een-GLEHS", meaning:"Do you speak English?", note:"" },
+  { es:"No hablo mucho español", say:"noh AH-bloh MOO-choh es-pahn-YOHL", meaning:"I don't speak much Spanish", note:"Honest and always met kindly" },
+  { es:"¿Cuánto cuesta?", say:"KWAHN-toh KWEHS-tah", meaning:"How much does it cost?", note:"For molas and crafts — prices are often fixed" },
+  { es:"¿Puedo tomar una foto?", say:"PWEH-doh toh-MAR OO-nah FOH-toh", meaning:"May I take a photo?", note:"Always ask before photographing people" },
+  { es:"¿Dónde está el baño?", say:"DOHN-deh es-TAH el BAHN-yoh", meaning:"Where is the restroom?", note:"" },
+  { es:"¡Qué bonito!", say:"keh boh-NEE-toh", meaning:"How beautiful!", note:"For a view, a mola, a basket" },
+  { es:"¡Mire, un perezoso!", say:"MEE-reh, oon peh-reh-SOH-soh", meaning:"Look, a sloth!", note:"Mono = monkey · tucán = toucan · águila = eagle" }
 ];
 
 const tbody = document.getElementById("phrases-tbody");
 const statusEl = document.getElementById("tts-status");
 const voiceInfoEl = document.getElementById("voice-info");
-
-let femaleJpVoice = null;
+let esVoice = null;
 let currentBtn = null;
 
 function pickVoice(voices) {
-  const jpVoices = voices.filter(v => v.lang.startsWith("ja"));
-  if (!jpVoices.length) return null;
-  const female = jpVoices.find(v =>
-    /kyoko|haruka|mizuki|female|woman|hana|siri.*ja|google.*japan.*female/i.test(v.name)
-  );
-  return female || jpVoices[0];
-}
-
-function initVoices() {
-  if (!window.speechSynthesis) {
-    statusEl.style.display = "block";
-    return;
+  const es = voices.filter(v => /^es/i.test(v.lang));
+  if (!es.length) return null;
+  const pref = ["es-MX", "es-US", "es-419", "es-CO", "es-CR", "es-PA"];
+  for (const tag of pref) {
+    const v = es.find(v => v.lang.replace("_", "-").toLowerCase() === tag.toLowerCase());
+    if (v) return v;
   }
-  const voices = speechSynthesis.getVoices();
-  if (voices.length) {
-    femaleJpVoice = pickVoice(voices);
-    if (!femaleJpVoice) {
-      statusEl.style.display = "block";
-    } else {
-      voiceInfoEl.textContent = "Voice: " + femaleJpVoice.name + " (" + femaleJpVoice.lang + ")";
-      voiceInfoEl.style.display = "block";
-    }
+  return es[0];
+}
+function showVoice() {
+  if (esVoice) {
+    statusEl.style.display = "none";
+    voiceInfoEl.textContent = "Voice: " + esVoice.name + " (" + esVoice.lang + ")";
+    voiceInfoEl.style.display = "block";
   }
 }
-
-if (window.speechSynthesis) {
-  speechSynthesis.addEventListener("voiceschanged", () => {
-    femaleJpVoice = pickVoice(speechSynthesis.getVoices());
-    if (femaleJpVoice) {
-      statusEl.style.display = "none";
-      voiceInfoEl.textContent = "Voice: " + femaleJpVoice.name + " (" + femaleJpVoice.lang + ")";
-      voiceInfoEl.style.display = "block";
-    }
-  });
-  initVoices();
+if ("speechSynthesis" in window) {
+  esVoice = pickVoice(speechSynthesis.getVoices());
+  showVoice();
+  speechSynthesis.addEventListener("voiceschanged", () => { esVoice = pickVoice(speechSynthesis.getVoices()); showVoice(); });
+  setTimeout(() => { if (!esVoice) statusEl.style.display = "block"; }, 1500);
 } else {
   statusEl.style.display = "block";
 }
 
+function resetBtn(btn) { btn.textContent = "🔊"; btn.classList.remove("speaking"); }
 function speak(text, btn) {
-  if (!window.speechSynthesis) return;
+  if (!("speechSynthesis" in window)) return;
+  const wasSpeaking = btn.classList.contains("speaking");
   speechSynthesis.cancel();
-
-  if (currentBtn && currentBtn !== btn) {
-    currentBtn.textContent = "🔊";
-    currentBtn.classList.remove("speaking");
-  }
-  if (btn.classList.contains("speaking")) {
-    btn.textContent = "🔊";
-    btn.classList.remove("speaking");
-    currentBtn = null;
-    return;
-  }
-
-  const voices = speechSynthesis.getVoices();
-  femaleJpVoice = femaleJpVoice || pickVoice(voices);
-
-  const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = "ja-JP";
-  utt.rate = 0.85;
-  utt.pitch = 1.1;
-  if (femaleJpVoice) utt.voice = femaleJpVoice;
-
-  btn.textContent = "⏸";
-  btn.classList.add("speaking");
-  currentBtn = btn;
-
-  utt.onend = () => {
-    btn.textContent = "🔊";
-    btn.classList.remove("speaking");
-    currentBtn = null;
-  };
-  utt.onerror = () => {
-    btn.textContent = "🔊";
-    btn.classList.remove("speaking");
-    currentBtn = null;
-  };
-
-  speechSynthesis.speak(utt);
+  if (currentBtn) resetBtn(currentBtn);
+  currentBtn = null;
+  if (wasSpeaking) return;
+  esVoice = esVoice || pickVoice(speechSynthesis.getVoices());
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = esVoice ? esVoice.lang : "es-MX";
+  if (esVoice) u.voice = esVoice;
+  u.rate = 0.85;
+  btn.textContent = "⏸"; btn.classList.add("speaking"); currentBtn = btn;
+  u.onend = u.onerror = () => { resetBtn(btn); if (currentBtn === btn) currentBtn = null; };
+  speechSynthesis.speak(u);
 }
 
-phrases.forEach((p, i) => {
+phrases.forEach(p => {
   const tr = document.createElement("tr");
-  if (i % 2 === 1) tr.style.background = "white";
   tr.innerHTML = `
-    <td style="padding:10px 8px 10px 14px;">
-      <button class="speak-btn" title="Hear this phrase" aria-label="Speak: ${p.romaji}">🔊</button>
-    </td>
-    <td style="padding:10px 14px; vertical-align:top;"><span class="jp">${p.jp}</span></td>
-    <td style="padding:10px 14px; vertical-align:top;"><span class="romaji">${p.romaji}</span></td>
-    <td style="padding:10px 14px; vertical-align:top;">${p.meaning}<div class="phrase-note">${p.note}</div></td>
-  `;
+    <td><button class="speak-btn" type="button" title="Hear this phrase" aria-label="Speak: ${p.es}">🔊</button></td>
+    <td><span class="es">${p.es}</span></td>
+    <td><span class="say">${p.say}</span></td>
+    <td>${p.meaning}${p.note ? `<div class="phrase-note">${p.note}</div>` : ""}</td>`;
   const btn = tr.querySelector(".speak-btn");
-  btn.addEventListener("click", () => speak(p.jp, btn));
+  btn.addEventListener("click", () => speak(p.es, btn));
   tbody.appendChild(tr);
 });
 </script>
