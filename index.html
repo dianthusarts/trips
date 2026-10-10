@@ -183,24 +183,7 @@
   .pack-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
   .pack-text { line-height: 1.4; }
   .pack-why { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; font-style: italic; }
-
-  /* PHRASES */
-  .phrases-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  .phrases-table thead tr { background: var(--ink); color: var(--paper); }
-  .phrases-table th { padding: 10px 14px; text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; }
-  .phrases-table td { padding: 10px 14px; border-bottom: 1px solid var(--warm-mid); vertical-align: top; }
-  .phrases-table tr:nth-child(even) td { background: white; }
-  .es { font-family: 'Fraunces', serif; font-size: 16px; }
-  .say { font-family: 'DM Mono', monospace; color: var(--teal); font-size: 12px; }
-  .phrase-note { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 3px; }
-  .speak-btn {
-    background: none; border: 1px solid var(--warm-mid); border-radius: 50%;
-    width: 30px; height: 30px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px; padding: 0; transition: background 0.15s, border-color 0.15s;
-  }
-  .speak-btn:hover { background: var(--warm-mid); border-color: var(--muted); }
-  .speak-btn.speaking { background: #e3f2e9; border-color: var(--teal); }
+  .pack-subhead { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 300; margin: 2.5rem 0 0.3rem; }
 
   /* STOPS */
   .stops-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
@@ -255,7 +238,6 @@
     .hero-stats { gap: 1.5rem; }
     .phase-tag { display: none; }
     .lesson-body { padding-left: 18px; }
-    .phrases-table th:nth-child(3), .phrases-table td:nth-child(3) { display: none; }
   }
 </style>
 </head>
@@ -266,7 +248,6 @@
   <a href="#logistics">Logistics</a>
   <a href="#study">Study Guide</a>
   <a href="#packing">Packing</a>
-  <a href="#phrases">Phrases</a>
   <a href="#stops">Stops</a>
   <a href="#itinerary">Itinerary</a>
 </nav>
@@ -374,22 +355,39 @@
         <h3>Leave at home</h3>
         <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Heavy jeans and cotton<span class="pack-why">Too hot and won't dry in the humidity.</span></div></div>
         <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Wheeled bag for village days<span class="pack-why">Bring a soft daypack; you'll be climbing in and out of Zodiacs.</span></div></div>
-        <div class="pack-item"><span class="pack-icon">❌</span><div class="pack-text">Lots of formal wear<span class="pack-why">Expedition cruises are relaxed; a smart-casual outfit or two covers dinners.</span></div></div>
+      </div>
+    </div>
+
+    <h3 class="pack-subhead">On board: PONANT's dress guidance</h3>
+    <p class="section-sub">From the cruise line's own packing advice for Le Lapérouse</p>
+
+    <div class="packing-grid">
+      <div class="pack-card">
+        <h3>Days on board</h3>
+        <div class="pack-item"><span class="pack-icon">👚</span><div class="pack-text">Comfortable, casual outfits<span class="pack-why">Daytime on the ship is relaxed.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">🧣</span><div class="pack-text">Light sweater, light jacket or shawl<span class="pack-why">The whole ship is air-conditioned, which can feel cool after the tropical heat outside.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">👟</span><div class="pack-text">Light but comfortable shoes<span class="pack-why">For walking the public areas and decks.</span></div></div>
+      </div>
+
+      <div class="pack-card">
+        <h3>Informal evenings</h3>
+        <div class="pack-item"><span class="pack-icon">🍽️</span><div class="pack-text">Smart-casual attire<span class="pack-why">Most evenings. Shorts and T-shirts are not allowed in the restaurants.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">👗</span><div class="pack-text">Simple dress, or skirt or trousers<span class="pack-why">Paired with a blouse or a polo.</span></div></div>
+      </div>
+
+      <div class="pack-card">
+        <h3>Gala evenings (two)</h3>
+        <div class="pack-item"><span class="pack-icon">🥂</span><div class="pack-text">One or two formal outfits<span class="pack-why">Two gala evenings are held during the cruise.</span></div></div>
+        <div class="pack-item"><span class="pack-icon">💃</span><div class="pack-text">Cocktail attire<span class="pack-why">An evening dress is optional, if you wish.</span></div></div>
+      </div>
+
+      <div class="pack-card">
+        <h3>Officer's evening — probably not on this cruise</h3>
+        <div class="pack-item"><span class="pack-icon">🤍</span><div class="pack-text">Stylish white outfit (or black and white)<span class="pack-why">PONANT may hold a white-dress-code Officer's Evening on cruises longer than 8 nights. Yours is 7 nights (Feb 19–26), so it likely won't happen. Pack something white only if you have room, or ask PONANT.</span></div></div>
       </div>
     </div>
   </section>
 
-  <!-- PHRASES -->
-  <section id="phrases">
-    <h2>Essential Spanish Phrases</h2>
-    <p class="section-sub">Tap the speaker to hear each phrase in a Latin American Spanish voice. Works in Chrome, Safari, Edge and Firefox.</p>
-    <div class="note-box" id="tts-status" style="display:none;">Your browser doesn't support speech, or no Spanish voice is installed. On iPhone and iPad this works in Safari; on desktop, try Chrome or Edge.</div>
-    <div id="voice-info" style="display:none; font-size:12px; color:var(--muted); font-style:italic; margin-bottom:1rem;"></div>
-    <table class="phrases-table">
-      <thead><tr><th style="width:44px;"></th><th>Spanish</th><th>Say it</th><th>Meaning &amp; when to use</th></tr></thead>
-      <tbody id="phrases-tbody"></tbody>
-    </table>
-  </section>
 
   <!-- STOPS -->
   <section id="stops">
@@ -726,86 +724,6 @@ window.addEventListener("scroll", () => {
   navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
 });
 
-// ---------- Spanish phrases with speech ----------
-const phrases = [
-  { es:"Buenos días", say:"BWAY-nohs DEE-ahs", meaning:"Good morning", note:"Used until about noon" },
-  { es:"Buenas tardes", say:"BWAY-nahs TAR-dehs", meaning:"Good afternoon", note:"From midday until dark" },
-  { es:"Mucho gusto", say:"MOO-choh GOOS-toh", meaning:"Nice to meet you", note:"When you meet a guide or host" },
-  { es:"Gracias", say:"GRAH-see-ahs", meaning:"Thank you", note:"\"Muchas gracias\" for extra warmth" },
-  { es:"Por favor", say:"por fah-VOR", meaning:"Please", note:"" },
-  { es:"Con permiso", say:"kohn pehr-MEE-soh", meaning:"Excuse me (to pass by)", note:"Moving through a crowd or a narrow boat" },
-  { es:"Disculpe", say:"dees-KOOL-peh", meaning:"Excuse me / sorry", note:"To get someone's attention" },
-  { es:"¡Pura vida!", say:"POO-rah VEE-dah", meaning:"\"Pure life\" — Costa Rica's all-purpose phrase", note:"Hello, thanks, all good. Ticos will light up." },
-  { es:"¿Habla inglés?", say:"AH-blah een-GLEHS", meaning:"Do you speak English?", note:"" },
-  { es:"No hablo mucho español", say:"noh AH-bloh MOO-choh es-pahn-YOHL", meaning:"I don't speak much Spanish", note:"Honest and always met kindly" },
-  { es:"¿Cuánto cuesta?", say:"KWAHN-toh KWEHS-tah", meaning:"How much does it cost?", note:"For molas and crafts — prices are often fixed" },
-  { es:"¿Puedo tomar una foto?", say:"PWEH-doh toh-MAR OO-nah FOH-toh", meaning:"May I take a photo?", note:"Always ask before photographing people" },
-  { es:"¿Dónde está el baño?", say:"DOHN-deh es-TAH el BAHN-yoh", meaning:"Where is the restroom?", note:"" },
-  { es:"¡Qué bonito!", say:"keh boh-NEE-toh", meaning:"How beautiful!", note:"For a view, a mola, a basket" },
-  { es:"¡Mire, un perezoso!", say:"MEE-reh, oon peh-reh-SOH-soh", meaning:"Look, a sloth!", note:"Mono = monkey · tucán = toucan · águila = eagle" }
-];
-
-const tbody = document.getElementById("phrases-tbody");
-const statusEl = document.getElementById("tts-status");
-const voiceInfoEl = document.getElementById("voice-info");
-let esVoice = null;
-let currentBtn = null;
-
-function pickVoice(voices) {
-  const es = voices.filter(v => /^es/i.test(v.lang));
-  if (!es.length) return null;
-  const pref = ["es-MX", "es-US", "es-419", "es-CO", "es-CR", "es-PA"];
-  for (const tag of pref) {
-    const v = es.find(v => v.lang.replace("_", "-").toLowerCase() === tag.toLowerCase());
-    if (v) return v;
-  }
-  return es[0];
-}
-function showVoice() {
-  if (esVoice) {
-    statusEl.style.display = "none";
-    voiceInfoEl.textContent = "Voice: " + esVoice.name + " (" + esVoice.lang + ")";
-    voiceInfoEl.style.display = "block";
-  }
-}
-if ("speechSynthesis" in window) {
-  esVoice = pickVoice(speechSynthesis.getVoices());
-  showVoice();
-  speechSynthesis.addEventListener("voiceschanged", () => { esVoice = pickVoice(speechSynthesis.getVoices()); showVoice(); });
-  setTimeout(() => { if (!esVoice) statusEl.style.display = "block"; }, 1500);
-} else {
-  statusEl.style.display = "block";
-}
-
-function resetBtn(btn) { btn.textContent = "🔊"; btn.classList.remove("speaking"); }
-function speak(text, btn) {
-  if (!("speechSynthesis" in window)) return;
-  const wasSpeaking = btn.classList.contains("speaking");
-  speechSynthesis.cancel();
-  if (currentBtn) resetBtn(currentBtn);
-  currentBtn = null;
-  if (wasSpeaking) return;
-  esVoice = esVoice || pickVoice(speechSynthesis.getVoices());
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = esVoice ? esVoice.lang : "es-MX";
-  if (esVoice) u.voice = esVoice;
-  u.rate = 0.85;
-  btn.textContent = "⏸"; btn.classList.add("speaking"); currentBtn = btn;
-  u.onend = u.onerror = () => { resetBtn(btn); if (currentBtn === btn) currentBtn = null; };
-  speechSynthesis.speak(u);
-}
-
-phrases.forEach(p => {
-  const tr = document.createElement("tr");
-  tr.innerHTML = `
-    <td><button class="speak-btn" type="button" title="Hear this phrase" aria-label="Speak: ${p.es}">🔊</button></td>
-    <td><span class="es">${p.es}</span></td>
-    <td><span class="say">${p.say}</span></td>
-    <td>${p.meaning}${p.note ? `<div class="phrase-note">${p.note}</div>` : ""}</td>`;
-  const btn = tr.querySelector(".speak-btn");
-  btn.addEventListener("click", () => speak(p.es, btn));
-  tbody.appendChild(tr);
-});
 </script>
 </body>
 </html>
